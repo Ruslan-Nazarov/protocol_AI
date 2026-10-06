@@ -1,0 +1,21 @@
+{
+  "id": "figures",
+  "version": 1,
+  "profile": "syllogistic-universal-v1",
+  "scope": "Классификация фигур в этом примере",
+  "selection_reason": "Нужен вывод об отношениях классов из универсальных посылок; достаточно универсального фрагмента силлогистики без предположения существования объектов.",
+  "alternatives": [
+    {"profile": "classical-propositional-v1", "reason_not_selected": "Атомарные высказывания скрыли бы отношения между классами S, M и P."}
+  ],
+  "enabled_rules": ["barbara", "celarent", "no_conversion"],
+  "symbols": [
+    {"id": "square", "symbol": "S", "meaning": "квадраты"},
+    {"id": "rectangle", "symbol": "M", "meaning": "прямоугольники"},
+    {"id": "quadrilateral", "symbol": "P", "meaning": "четырёхугольники"}
+  ],
+  "sources": {"geometry": "Все квадраты являются прямоугольниками. Все прямоугольники являются четырёхугольниками."},
+  "premises": [
+    {"id": "p1", "formula": ["all", "S", "M"], "basis": {"kind": "source", "ref": "geometry", "quote": "Все квадраты являются прямоугольниками."}},
+    {"id": "p2", "formula": ["all", "M", "P"], "basis": {"kind": "source", "ref": "geometry", "quote": "Все прямоугольники являются четырёхугольниками."}}
+  ]
+}

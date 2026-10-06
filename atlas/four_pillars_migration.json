@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "old_source": "docs/history/before-four-pillars-20261004/PROTOCOL.md",
+  "old_sha256": "d87f21ac4a0807552e82c7c9d1bf086d44e16a1d184927f08e5d88e7cbba064d",
+  "new_sha256": "03a2ca8333643af704ac4f3482a7bdc691b02dc033a0985aed5af8ce45a5acfc",
+  "replacements": [
+    {
+      "before": "Четыре опоры: **проверяемость**, **непрерывность**, **границы**, **исследовательская строгость**. Они применяются к исследованию, разработке и другим задачам, в которых результат одной работы становится основанием следующей.",
+      "after": "Четыре опоры: **логика, картина мира, развитие и проверка реальностью**. Ответ строится в определённой картине мира через развитие предмета в рамках выбранной логики, затем сталкивается с реальностью. Проверяемость, непрерывность, границы и исследовательская строгость сохраняются как требования к этой работе.",
+      "reason": "Four pillars corrected by the human; earlier requirements retained."
+    },
+    {
+      "before": "Статус: черновик для обсуждения, редакция 2026-10-04. Требования ниже описывают, как должна быть устроена работа; их наличие в тексте не означает, что все они обеспечены текущим приложением. Реализованные механизмы и их границы указаны в [сверке реализации](docs/PROCESS_AUDIT.md); краткое представление идеи — в [тексте для обсуждения](docs/PROTOCOL_BRIEF.md). Сохранение прежних правил прослеживается в [карте переноса](docs/CORRECTNESS_REVISION.md). Всё, что помечено `[?]`, — открытый вопрос.",
+      "after": "",
+      "reason": "Human requested removal of service paragraph; preserved in historical source.",
+      "preserved_in": "docs/history/before-four-pillars-20261004/PROTOCOL.md"
+    },
+    {
+      "before": "1. **Человек — источник намерения и окончательных решений.** Человек задаёт цель, границы полномочий и принимает результат. Человек и ИИ оба проверяют утверждения, критикуют доводы и выявляют ошибки. ИИ предлагает, обосновывает и исполняет в пределах поручения. Принятие результата не делает утверждение истинным: его обоснованность определяется доступными свидетельствами и остаётся открытой для пересмотра.\n2. **Всё существенное фиксируется письменно.** Что не записано — не считается решённым и не переживёт сессию.\n3. **Различай знание и догадку.** Каждое утверждение ИИ имеет статус (см. §3.2).\n4. **Неопределённость называется вслух.** «Не знаю» и «не проверял» — допустимые и ценные ответы.\n5. **Лучше остановиться и спросить, чем молча додумать** — там, где цена ошибки выше цены вопроса.\n6. **Выбирай логику явно.** По содержанию задачи назови логическую систему, правила вывода, область применения и основания выбора. Диалектическая методология применяется только при её явном выборе; она не предписана всем задачам. Название логики без определённого способа применения недостаточно.\n7. **Показывай применение выбранной логики.** Свяжи исходное содержание, формальные посылки, конкретное правило и заключение. Отделяй корректность вывода от истинности посылок и верности их перевода в формальную запись.\n8. **Закрепляй проверяемое архитектурой.** Формальные условия исполняются кодом. Для каждого проверяемого правила заранее задаются ожидаемое нарушение, обнаружитель, контрольные примеры и реакция. Рассказ ИИ о соблюдении правила не заменяет свидетельство; жёсткость относится к обязательной проверке в заявленной области контроля.",
+      "after": "**Выбирай логику явно.** По содержанию задачи назови логическую систему, правила вывода, область применения и основания выбора. Диалектическая методология применяется только при её явном выборе; она не предписана всем задачам. Название логики без определённого способа применения недостаточно.\n\n**Показывай применение выбранной логики.** Свяжи исходное содержание, формальные посылки, конкретное правило и заключение. Отделяй корректность вывода от истинности посылок и верности их перевода в формальную запись.\n\n**Закрепляй проверяемое архитектурой.** Формальные условия исполняются кодом. Для каждого проверяемого правила заранее задаются ожидаемое нарушение, обнаружитель, контрольные примеры и реакция. Рассказ ИИ о соблюдении правила не заменяет свидетельство; жёсткость относится к обязательной проверке в заявленной области контроля.",
+      "reason": "По прямому указанию человека оставлены только бывшие принципы 6, 7, 8 без нумерации."
+    }
+  ],
+  "sections": [
+    {
+      "section": "1",
+      "old_basis_sha256": "829d1d5b944f730c387401d70b4e0b8713039a802260dfa11f6f4f8210087f5c",
+      "new_basis_sha256": "af202e817c083ae71d978562192acd3fcc7eaf2e902d9d1604f6d64b0299e43b",
+      "changed": true
+    },
+    {
+      "section": "2",
+      "old_basis_sha256": "d23e51a5b1f4b2c5600d56d57768b0c621dc1bde4ee84daf9e3a108cd07b0eb4",
+      "new_basis_sha256": "37e9f5a39164864b7f3bf9bac8a40881705c420cedb56048518704ccd6c15c79",
+      "changed": true
+    },
+    {
+      "section": "2.1",
+      "old_basis_sha256": "80c0f5969130da7a1180b3d0509ee5b392104a00ee78babba32e7e57f2e0313e",
+      "new_basis_sha256": "80c0f5969130da7a1180b3d0509ee5b392104a00ee78babba32e7e57f2e0313e",
+      "changed": false
+    },
+    {
+      "section": "2.2",
+      "old_basis_sha256": "ffeb7970c414d72a7f63bb229325cc8d08c134abdfbd94254f4985d440b92d15",
+      "new_basis_sha256": "ffeb7970c414d72a7f63bb229325cc8d08c134abdfbd94254f4985d440b92d15",
+      "changed": false
+    },
+    {
+      "section": "2.3",
+      "old_basis_sha256": "e713bb4fe68c2539ca298dfecec27ff8b29c361e13348bea957c3426f63eaa1d",
+      "new_basis_sha256": "e713bb4fe68c2539ca298dfecec27ff8b29c361e13348bea957c3426f63eaa1d",
+      "changed": false
+    },
+    {
+      "section": "2.4",
+      "old_basis_sha256": "fb3d90fa6a6341dcb4b0e5276b1ab3a6f64e532ab2f5df03891463115e6e2776",
+      "new_basis_sha256": "fb3d90fa6a6341dcb4b0e5276b1ab3a6f64e532ab2f5df03891463115e6e2776",
+      "changed": false
+    },
+    {
+      "section": "2.5",
+      "old_basis_sha256": "b842f0265895d1f55ca2b5d082cd8e8f39c7d5cc5b21569ca10405dfdb8a9221",
+      "new_basis_sha256": "b842f0265895d1f55ca2b5d082cd8e8f39c7d5cc5b21569ca10405dfdb8a9221",
+      "changed": false
+    },
+    {
+      "section": "2.6",
+      "old_basis_sha256": "784e3a96a1ad4c69289ca5a00041b1dc0f087b6541004b92b949a3dad3906d42",
+      "new_basis_sha256": "784e3a96a1ad4c69289ca5a00041b1dc0f087b6541004b92b949a3dad3906d42",
+      "changed": false
+    },
+    {
+      "section": "2.7",
+      "old_basis_sha256": "6f299f711649d6cf0a9bc2e7db003b8fe5f59eed4cd06849a09609de89381ad7",
+      "new_basis_sha256": "6f299f711649d6cf0a9bc2e7db003b8fe5f59eed4cd06849a09609de89381ad7",
+      "changed": false
+    },
+    {
+      "section": "2.8",
+      "old_basis_sha256": "75b26664c460f6a995bffb014d3ca667cf47d9c01469ead8b320316410be72c8",
+      "new_basis_sha256": "75b26664c460f6a995bffb014d3ca667cf47d9c01469ead8b320316410be72c8",
+      "changed": false
+    },
+    {
+      "section": "3",
+      "old_basis_sha256": "853e6f34bbf88396996d4685a8abff545c0fa7994905a96bad1fd37c07264611",
+      "new_basis_sha256": "853e6f34bbf88396996d4685a8abff545c0fa7994905a96bad1fd37c07264611",
+      "changed": false
+    },
+    {
+      "section": "3.1",
+      "old_basis_sha256": "0ac81df1eb4394a51ac50af36c38179e0ea2a7433a9be7d82a2d5ad9d0c9d8e2",
+      "new_basis_sha256": "0ac81df1eb4394a51ac50af36c38179e0ea2a7433a9be7d82a2d5ad9d0c9d8e2",
+      "changed": false
+    },
+    {
+      "section": "3.2",
+      "old_basis_sha256": "244443da289df35b9df5234d78c28b2765d89fa4ce2c42f26311013020b707ed",
+      "new_basis_sha256": "244443da289df35b9df5234d78c28b2765d89fa4ce2c42f26311013020b707ed",
+      "changed": false
+    },
+    {
+      "section": "3.3",
+      "old_basis_sha256": "6b4eaf31dec537875d897eef16952bde1092d8c59eb28642d57a84b7e48b61eb",
+      "new_basis_sha256": "6b4eaf31dec537875d897eef16952bde1092d8c59eb28642d57a84b7e48b61eb",
+      "changed": false
+    },
+    {
+      "section": "3.4",
+      "old_basis_sha256": "c24ca8c1de86df46b93a685ecf73bc133b5d3a3e8ca2054491455bd7208a3245",
+      "new_basis_sha256": "c24ca8c1de86df46b93a685ecf73bc133b5d3a3e8ca2054491455bd7208a3245",
+      "changed": false
+    },
+    {
+      "section": "4",
+      "old_basis_sha256": "81764556e5047a0c45a2dca6e8c14c81cbda314b20e3de9560138f03e501cda3",
+      "new_basis_sha256": "81764556e5047a0c45a2dca6e8c14c81cbda314b20e3de9560138f03e501cda3",
+      "changed": false
+    },
+    {
+      "section": "4.1",
+      "old_basis_sha256": "189100dd7ee45ea646cc719eb6d10c899493e913c1f047f4412e3fcaedded86c",
+      "new_basis_sha256": "189100dd7ee45ea646cc719eb6d10c899493e913c1f047f4412e3fcaedded86c",
+      "changed": false
+    },
+    {
+      "section": "4.2",
+      "old_basis_sha256": "cbd2cf043dfccb3077c6a0a93aea0d0a82023798a65adee57879e4450828f402",
+      "new_basis_sha256": "cbd2cf043dfccb3077c6a0a93aea0d0a82023798a65adee57879e4450828f402",
+      "changed": false
+    },
+    {
+      "section": "4.3",
+      "old_basis_sha256": "75eb07fc3d6e24681fe482625fcffeeb0b8a5cd23a10f1bf713a1dafb040cd5d",
+      "new_basis_sha256": "75eb07fc3d6e24681fe482625fcffeeb0b8a5cd23a10f1bf713a1dafb040cd5d",
+      "changed": false
+    },
+    {
+      "section": "4.4",
+      "old_basis_sha256": "0ba77cb3b263666ea96be155850a217c0c321014a3a81dfbc1993d25cc3c336e",
+      "new_basis_sha256": "0ba77cb3b263666ea96be155850a217c0c321014a3a81dfbc1993d25cc3c336e",
+      "changed": false
+    },
+    {
+      "section": "4.5",
+      "old_basis_sha256": "d18c7f867d2bb3066e312c9a6ed01050523dbe2e98ab583b0791938a1c84bf5b",
+      "new_basis_sha256": "d18c7f867d2bb3066e312c9a6ed01050523dbe2e98ab583b0791938a1c84bf5b",
+      "changed": false
+    },
+    {
+      "section": "5",
+      "old_basis_sha256": "6bab895d9d2006fc874a99602a7501483aaffa48ddb45f1aff3c56aec5bbed56",
+      "new_basis_sha256": "6bab895d9d2006fc874a99602a7501483aaffa48ddb45f1aff3c56aec5bbed56",
+      "changed": false
+    },
+    {
+      "section": "5.1",
+      "old_basis_sha256": "847b50508c7b3f056080b52dad0b488d7f6171c586a26dead2633142d8955782",
+      "new_basis_sha256": "847b50508c7b3f056080b52dad0b488d7f6171c586a26dead2633142d8955782",
+      "changed": false
+    },
+    {
+      "section": "5.2",
+      "old_basis_sha256": "1933b599029de46d423524e8bdfcb75f144ae9ca2b4c401c31dd95c700cea14c",
+      "new_basis_sha256": "1933b599029de46d423524e8bdfcb75f144ae9ca2b4c401c31dd95c700cea14c",
+      "changed": false
+    },
+    {
+      "section": "5.3",
+      "old_basis_sha256": "5d59eceb1806a046ef7638d6b7570211dbf51027d3ff5ffe2ff4997022397e17",
+      "new_basis_sha256": "5d59eceb1806a046ef7638d6b7570211dbf51027d3ff5ffe2ff4997022397e17",
+      "changed": false
+    },
+    {
+      "section": "5.4",
+      "old_basis_sha256": "1debe578bb67b8094b618a1d5329adfd988b0805e67ee44171d83a0ae234c5ac",
+      "new_basis_sha256": "1debe578bb67b8094b618a1d5329adfd988b0805e67ee44171d83a0ae234c5ac",
+      "changed": false
+    },
+    {
+      "section": "6",
+      "old_basis_sha256": "d1fa35aafd5a67986fe07cb62aa6aec6ffbe24fd0c02535ce4bfb1de1fed58a9",
+      "new_basis_sha256": "d1fa35aafd5a67986fe07cb62aa6aec6ffbe24fd0c02535ce4bfb1de1fed58a9",
+      "changed": false
+    },
+    {
+      "section": "6.1",
+      "old_basis_sha256": "6ba2ecac63dc99100d8e3cb0839f6893ef8ccc9016c9b41dd9e168a4b831fe7f",
+      "new_basis_sha256": "6ba2ecac63dc99100d8e3cb0839f6893ef8ccc9016c9b41dd9e168a4b831fe7f",
+      "changed": false
+    },
+    {
+      "section": "6.2",
+      "old_basis_sha256": "9e23339572ca6c9ed8989ea6562d61726f0b786b4af1484d510e0df1f1f3ee2c",
+      "new_basis_sha256": "9e23339572ca6c9ed8989ea6562d61726f0b786b4af1484d510e0df1f1f3ee2c",
+      "changed": false
+    },
+    {
+      "section": "6.3",
+      "old_basis_sha256": "5fdc54d827914ea300ff29cf81f166c4c128eafbf4004512bb38e98e0ee26068",
+      "new_basis_sha256": "5fdc54d827914ea300ff29cf81f166c4c128eafbf4004512bb38e98e0ee26068",
+      "changed": false
+    },
+    {
+      "section": "6.4",
+      "old_basis_sha256": "bb9bc129abb087d0051fde79c13b7bcf938d1e0de394e40e6bbdd8dd4c803e38",
+      "new_basis_sha256": "bb9bc129abb087d0051fde79c13b7bcf938d1e0de394e40e6bbdd8dd4c803e38",
+      "changed": false
+    },
+    {
+      "section": "6.5",
+      "old_basis_sha256": "1f9e982091ab2a11688b4c920c21b3fa3b099d7aacf5d6eaea68f1d31b631f42",
+      "new_basis_sha256": "1f9e982091ab2a11688b4c920c21b3fa3b099d7aacf5d6eaea68f1d31b631f42",
+      "changed": false
+    },
+    {
+      "section": "7",
+      "old_basis_sha256": "6c0826a897a3da2ac0c0d620549b102c7a624f641df5e3ff4f8cd9d402b7f6ce",
+      "new_basis_sha256": "6c0826a897a3da2ac0c0d620549b102c7a624f641df5e3ff4f8cd9d402b7f6ce",
+      "changed": false
+    },
+    {
+      "section": "8",
+      "old_basis_sha256": "c7c9b47b1081a377a6e7b2454cbea5c84bc5c2988ed1936f48711796bdf6b73b",
+      "new_basis_sha256": "2f2197f8feb7905c37be5cee87a8048d627e324e52099694cf583809a6f51fcd",
+      "changed": true
+    },
+    {
+      "section": "8.1",
+      "old_basis_sha256": "92445c31997e913afa1fed7d4c99b2f97914fc8104aeeccd78d915bb0187a9c8",
+      "new_basis_sha256": "fd74d5343462b927383376356e225269d7ff343e3fb88256749b2a1c1436c182",
+      "changed": true
+    },
+    {
+      "section": "8.1.1",
+      "old_basis_sha256": "e4b86ce707f901d16f1e296369b2a4ba03fcfed44dfd50c5215b8d3b1fb35585",
+      "new_basis_sha256": "6ca472605dc0eb86bd890b3c0d0d123f917796bb1ca9d6dec11d91d298d40755",
+      "changed": true
+    },
+    {
+      "section": "8.1.2",
+      "old_basis_sha256": "1102f74819655b7ab2a584bdb1fbc54aa565488ffa984391b6c78d617c9c87f6",
+      "new_basis_sha256": "1102f74819655b7ab2a584bdb1fbc54aa565488ffa984391b6c78d617c9c87f6",
+      "changed": false
+    },
+    {
+      "section": "8.1.3",
+      "old_basis_sha256": "b1cfae8f7333445ba2dd8ec9b1b76f9bc5c26a6ad2fb249d6df590b3579aeb68",
+      "new_basis_sha256": "b1cfae8f7333445ba2dd8ec9b1b76f9bc5c26a6ad2fb249d6df590b3579aeb68",
+      "changed": false
+    },
+    {
+      "section": "8.1.4",
+      "old_basis_sha256": "63af2c64751d11580a687c14b350544323aec8adf4a641d1f4cb5477c7e0ed9a",
+      "new_basis_sha256": "63af2c64751d11580a687c14b350544323aec8adf4a641d1f4cb5477c7e0ed9a",
+      "changed": false
+    },
+    {
+      "section": "8.1.5",
+      "old_basis_sha256": "86c8de74d8510c420ee570b426109bdbbcf1b7afb9f9134ebd9e910d15df2f30",
+      "new_basis_sha256": "86c8de74d8510c420ee570b426109bdbbcf1b7afb9f9134ebd9e910d15df2f30",
+      "changed": false
+    },
+    {
+      "section": "8.1.6",
+      "old_basis_sha256": "f675f7efec8cd42b9a95e6318efbfae54a1c215272e48a6f0217728c4b578215",
+      "new_basis_sha256": "f675f7efec8cd42b9a95e6318efbfae54a1c215272e48a6f0217728c4b578215",
+      "changed": false
+    },
+    {
+      "section": "8.1.7",
+      "old_basis_sha256": "d89ad70dc43c947e37b8b2cdfa3bd224870d947c14281135752e0287a558e4cd",
+      "new_basis_sha256": "d89ad70dc43c947e37b8b2cdfa3bd224870d947c14281135752e0287a558e4cd",
+      "changed": false
+    },
+    {
+      "section": "8.1.8",
+      "old_basis_sha256": "d0910893614176f5d9bd58f39e045cfe268728f778cceff759869e4291a34e8b",
+      "new_basis_sha256": "d0910893614176f5d9bd58f39e045cfe268728f778cceff759869e4291a34e8b",
+      "changed": false
+    },
+    {
+      "section": "8.1.9",
+      "old_basis_sha256": "f5b203f2c09fb6b755c3d695e59c5d16a3da0f45e16463b007ecae0bf1b6bf70",
+      "new_basis_sha256": "f5b203f2c09fb6b755c3d695e59c5d16a3da0f45e16463b007ecae0bf1b6bf70",
+      "changed": false
+    },
+    {
+      "section": "8.1.10",
+      "old_basis_sha256": "66d02687e0756ced6e5abbc85381b75be7de710df1d994dfd3a8b3ee7c2a5c28",
+      "new_basis_sha256": "66d02687e0756ced6e5abbc85381b75be7de710df1d994dfd3a8b3ee7c2a5c28",
+      "changed": false
+    },
+    {
+      "section": "8.1.11",
+      "old_basis_sha256": "a710cd20d78dc3efa12439f592bc2f57432eab6a43faa0bf56f168dd7cb87530",
+      "new_basis_sha256": "a710cd20d78dc3efa12439f592bc2f57432eab6a43faa0bf56f168dd7cb87530",
+      "changed": false
+    },
+    {
+      "section": "8.1.12",
+      "old_basis_sha256": "579738c9beeb065be9584dd6cae727d29737226295604354caed4340bc87ec42",
+      "new_basis_sha256": "579738c9beeb065be9584dd6cae727d29737226295604354caed4340bc87ec42",
+      "changed": false
+    },
+    {
+      "section": "8.1.13",
+      "old_basis_sha256": "10d1df3324a4f20733271e42e0f6d7c85f83868d97221beebd949721cb3f801a",
+      "new_basis_sha256": "10d1df3324a4f20733271e42e0f6d7c85f83868d97221beebd949721cb3f801a",
+      "changed": false
+    },
+    {
+      "section": "8.1.14",
+      "old_basis_sha256": "4b0578c38affc150ff7f39c059224d8c4df0df1587075311ab74d8f0232c42fb",
+      "new_basis_sha256": "4b0578c38affc150ff7f39c059224d8c4df0df1587075311ab74d8f0232c42fb",
+      "changed": false
+    },
+    {
+      "section": "8.1.15",
+      "old_basis_sha256": "af434296dd822bbd848e1235bcb478b382780e311f7aa8e91109e6312188ad36",
+      "new_basis_sha256": "af434296dd822bbd848e1235bcb478b382780e311f7aa8e91109e6312188ad36",
+      "changed": false
+    },
+    {
+      "section": "8.2",
+      "old_basis_sha256": "b29642680b3d30eb75305b6d7c6e6e15b7beab78b4fed4c8139fd4ac33cf55e1",
+      "new_basis_sha256": "b29642680b3d30eb75305b6d7c6e6e15b7beab78b4fed4c8139fd4ac33cf55e1",
+      "changed": false
+    },
+    {
+      "section": "8.3",
+      "old_basis_sha256": "2cb6ed33f980d960a9b14b0e582527e02e895baa5c41807c786947f948688648",
+      "new_basis_sha256": "2cb6ed33f980d960a9b14b0e582527e02e895baa5c41807c786947f948688648",
+      "changed": false
+    },
+    {
+      "section": "8.4",
+      "old_basis_sha256": "7981bde3f1d85a5e31b145b87790f50f5aa1247b51353e1ce6fc8c42c1fe0b73",
+      "new_basis_sha256": "7981bde3f1d85a5e31b145b87790f50f5aa1247b51353e1ce6fc8c42c1fe0b73",
+      "changed": false
+    },
+    {
+      "section": "8.5",
+      "old_basis_sha256": "4c0b8daedc0c5e146ed59e8bfb8014cbb5016e476ef77d80cb6a035ba3f8767f",
+      "new_basis_sha256": "4c0b8daedc0c5e146ed59e8bfb8014cbb5016e476ef77d80cb6a035ba3f8767f",
+      "changed": false
+    },
+    {
+      "section": "8.6",
+      "old_basis_sha256": "10687b70f44e96e261584bc8a415eaf2edeff901871d18bfa43707a734e2ccab",
+      "new_basis_sha256": "10687b70f44e96e261584bc8a415eaf2edeff901871d18bfa43707a734e2ccab",
+      "changed": false
+    },
+    {
+      "section": "9",
+      "old_basis_sha256": "c0f6a604fd42cb7f531adca582c766e84c921bfd950af10d7291c977b8443bd5",
+      "new_basis_sha256": "c0f6a604fd42cb7f531adca582c766e84c921bfd950af10d7291c977b8443bd5",
+      "changed": false
+    },
+    {
+      "section": "9.1",
+      "old_basis_sha256": "c4996f9d7def907deb8c49d0898a95d0f90f285b34f760bcfd2c900b78ee1c08",
+      "new_basis_sha256": "c4996f9d7def907deb8c49d0898a95d0f90f285b34f760bcfd2c900b78ee1c08",
+      "changed": false
+    },
+    {
+      "section": "9.2",
+      "old_basis_sha256": "096ca477029e01fff7178fe6c0bdaf7a8232b3e6432e7e9e011a5185654ff54a",
+      "new_basis_sha256": "096ca477029e01fff7178fe6c0bdaf7a8232b3e6432e7e9e011a5185654ff54a",
+      "changed": false
+    },
+    {
+      "section": "9.3",
+      "old_basis_sha256": "9d86642ee0050f96ee4db50add7ade26f87502a3c39ee6ccdb29a16de4676843",
+      "new_basis_sha256": "9d86642ee0050f96ee4db50add7ade26f87502a3c39ee6ccdb29a16de4676843",
+      "changed": false
+    },
+    {
+      "section": "9.4",
+      "old_basis_sha256": "888935ed0fec8b36071b8dfcc4fc7c70db39529cb977cab34e14edb2f7643945",
+      "new_basis_sha256": "888935ed0fec8b36071b8dfcc4fc7c70db39529cb977cab34e14edb2f7643945",
+      "changed": false
+    },
+    {
+      "section": "10",
+      "old_basis_sha256": "044ec2755948559a76d39c97f4538b0c306594564496694e67de661f7b85c818",
+      "new_basis_sha256": "044ec2755948559a76d39c97f4538b0c306594564496694e67de661f7b85c818",
+      "changed": false
+    },
+    {
+      "section": "10.1",
+      "old_basis_sha256": "61a40c5a46e803badeb26033dfc40c13196c4b5ea694489b33df5f6c6cac2f2c",
+      "new_basis_sha256": "61a40c5a46e803badeb26033dfc40c13196c4b5ea694489b33df5f6c6cac2f2c",
+      "changed": false
+    },
+    {
+      "section": "10.2",
+      "old_basis_sha256": "b1beddd5cb6ec81a4d851092baa34e2add8bfcdd99fa9b2b064e11b6e688ab4a",
+      "new_basis_sha256": "b1beddd5cb6ec81a4d851092baa34e2add8bfcdd99fa9b2b064e11b6e688ab4a",
+      "changed": false
+    },
+    {
+      "section": "10.3",
+      "old_basis_sha256": "4a4e5b2507058fc55b8836724d8383b1b83ea12c5557b72d51f9514e21697316",
+      "new_basis_sha256": "4a4e5b2507058fc55b8836724d8383b1b83ea12c5557b72d51f9514e21697316",
+      "changed": false
+    },
+    {
+      "section": "10.4",
+      "old_basis_sha256": "d2b9f7d4f5270a85f91355c4a740b03d2969f7db73f3d7cf31b641a7907677d4",
+      "new_basis_sha256": "d2b9f7d4f5270a85f91355c4a740b03d2969f7db73f3d7cf31b641a7907677d4",
+      "changed": false
+    },
+    {
+      "section": "11",
+      "old_basis_sha256": "6d38e20e461a46de2cad65931a0017ea0d051b264da495da315b60cf8dc76387",
+      "new_basis_sha256": "6d38e20e461a46de2cad65931a0017ea0d051b264da495da315b60cf8dc76387",
+      "changed": false
+    },
+    {
+      "section": "11.1",
+      "old_basis_sha256": "5c83c9e9d4b60e4acd6e68d86565c5d87cca56e8b1dcbb92a460b32b0d8ae622",
+      "new_basis_sha256": "5c83c9e9d4b60e4acd6e68d86565c5d87cca56e8b1dcbb92a460b32b0d8ae622",
+      "changed": false
+    },
+    {
+      "section": "11.2",
+      "old_basis_sha256": "a19ec8927af720af1f183d4f1fb32de70a43425affca5ca3b6ecafe4939ced06",
+      "new_basis_sha256": "a19ec8927af720af1f183d4f1fb32de70a43425affca5ca3b6ecafe4939ced06",
+      "changed": false
+    },
+    {
+      "section": "11.3",
+      "old_basis_sha256": "accf9ae14a06143c3be21d2b141dd70d5849eb2846ca702192ad0a3585753367",
+      "new_basis_sha256": "accf9ae14a06143c3be21d2b141dd70d5849eb2846ca702192ad0a3585753367",
+      "changed": false
+    },
+    {
+      "section": "11.4",
+      "old_basis_sha256": "1aef575a555fbf70d13bd634d1c084dfb22c1cdb6286b165c175cb84484dacc4",
+      "new_basis_sha256": "1aef575a555fbf70d13bd634d1c084dfb22c1cdb6286b165c175cb84484dacc4",
+      "changed": false
+    },
+    {
+      "section": "12",
+      "old_basis_sha256": "7044e4c3b65e58e76ea1d1f24fb0f3a4d2ef067554d47672a497a36eda62e445",
+      "new_basis_sha256": "7044e4c3b65e58e76ea1d1f24fb0f3a4d2ef067554d47672a497a36eda62e445",
+      "changed": false
+    },
+    {
+      "section": "12.1",
+      "old_basis_sha256": "b9c0fe870bce7396803cb3e1fa762c67b2ed504699a2bdd3da689624653c83e7",
+      "new_basis_sha256": "b9c0fe870bce7396803cb3e1fa762c67b2ed504699a2bdd3da689624653c83e7",
+      "changed": false
+    },
+    {
+      "section": "12.2",
+      "old_basis_sha256": "ad3356e7e572fb6f3df51b2a6d79a74377806e45a282377483ea9d749c878fc1",
+      "new_basis_sha256": "ad3356e7e572fb6f3df51b2a6d79a74377806e45a282377483ea9d749c878fc1",
+      "changed": false
+    },
+    {
+      "section": "12.3",
+      "old_basis_sha256": "861106ad41d1f86ef28f9f344ed54950c1239f77c0ee5d21740beabd9fae0f07",
+      "new_basis_sha256": "861106ad41d1f86ef28f9f344ed54950c1239f77c0ee5d21740beabd9fae0f07",
+      "changed": false
+    },
+    {
+      "section": "12.4",
+      "old_basis_sha256": "dd037e3e98e0a349405de5cf5b0332af16eee220f184986d84753d8c278412de",
+      "new_basis_sha256": "dd037e3e98e0a349405de5cf5b0332af16eee220f184986d84753d8c278412de",
+      "changed": false
+    }
+  ],
+  "new_source": "docs/history/before-section2-20261004/PROTOCOL.md"
+}

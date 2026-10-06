@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff5ec">
+  <title>Протокол · Подключение и развитие</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/runtime_dashboard.css">
+  <script defer src="/i18n.js"></script>
+  <script defer src="/lab.js"></script>
+  <script defer src="/workspace.js"></script>
+  <script defer src="/app.js"></script>
+  <script defer src="/source_editor.js"></script>
+  <script defer src="/editor_ai.js"></script>
+  <script defer src="/onboarding.js"></script>
+  <script defer src="/reader.js"></script>
+  <script defer src="/runtime_dashboard.js"></script>
+  <script defer src="/project.js"></script>
+  <script defer src="/portal.js"></script>
+  <script defer src="/comments.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Основная навигация">
+      <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">П</span><span>Протокол<span class="brand-sub">ПОДКЛЮЧЕНИЕ И РАЗВИТИЕ</span></span></a>
+      <div class="sidebar-label">ПРОТОКОЛ</div>
+      <nav id="navigation"></nav>
+      <details><summary class="sidebar-label source-label">ИСХОДНЫЕ ДОКУМЕНТЫ</summary><div id="document-links" class="document-links"></div></details>
+      <div class="sidebar-bottom"><span class="status-dot" aria-hidden="true"></span><span>Проект протокола<br><small id="revision-label">Читаем источники…</small></span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <button id="menu-toggle" class="icon-button menu-toggle" aria-label="Открыть навигацию" aria-expanded="false">☰</button>
+        <button id="go-back" class="secondary-button back-button" type="button" aria-label="Вернуться назад">← Назад</button>
+        <div class="breadcrumb">protocol_AI <span>/</span> <strong id="page-label">Начало</strong></div>
+        <form id="search-form" class="global-search" role="search"><label class="sr-only" for="search-input">Поиск по правилам и памяти</label><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Найти правило, термин, решение…" autocomplete="off"></form>
+        <label data-original class="sr-only" for="language-switch">Language / Язык</label><select data-original id="language-switch" class="language-switch" aria-label="Language / Язык"><option value="ru">RU</option><option value="en">EN</option></select><span id="language-status" class="sr-only" role="status"></span>
+        <button id="refresh" class="icon-button" aria-label="Обновить источники" title="Обновить источники">↻</button>
+      </header>
+      <div id="notice" class="notice hidden" role="status"></div>
+      <div class="content-layout">
+        <main id="main" tabindex="-1"><div class="loading">Загружаем правила и память проекта…</div></main>
+        <aside id="inspector" class="inspector" aria-label="Оглавление" hidden></aside>
+      </div>
+      <footer class="workspace-footer"><span>Правила → действие → проверка → развитие</span><span id="coverage-footer"></span></footer>
+    </div>
+  </div>
+  <dialog id="protocol-about" class="protocol-about-dialog" aria-labelledby="protocol-about-title">
+    <div class="section-heading"><h2 id="protocol-about-title">Как это работает</h2><button id="protocol-about-close" class="secondary-button" type="button" aria-label="Закрыть описание">Закрыть</button></div>
+    <p>Протокол задаёт порядок построения и проверки результатов ИИ. Здесь можно прочитать и изменить правила, понять их механику и подготовить подключение.</p>
+    <p>Рабочие задачи выполняются в Codex, Claude Code, другом агенте или чате. Память задачи хранится в её проекте. Этот интерфейс показывает сохранённые материалы и помогает разбирать недостатки протокола.</p>
+    <p>Для чтения, редактирования и подготовки подключения API модели не нужен. Дополнительные функции ИИ требуют отдельной настройки и расходуют API только при явном запуске.</p>
+    <a id="about-connect" class="primary-button" href="#project-start">Подключить протокол</a>
+  </dialog>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+  <div id="selection-toolbar" class="selection-toolbar" hidden><button id="selection-comment" type="button" class="primary-button">Комментарий</button><span>Ctrl+Alt+M</span></div>
+  <div id="comment-toast" class="comment-toast" role="status" hidden></div>
+  <dialog id="comment-dialog" class="comment-dialog" aria-labelledby="comment-dialog-title">
+    <form id="comment-form">
+      <h2 id="comment-dialog-title">Замечание к выделенному тексту</h2>
+      <p id="comment-location" class="small-note"></p>
+      <blockquote id="comment-quote" class="comment-quotation"></blockquote>
+      <label class="form-label" for="comment-kind">Что сделать</label><select id="comment-kind" class="text-input"></select>
+      <label class="form-label" for="comment-text">Ваш комментарий</label><textarea id="comment-text" class="draft-input compact" maxlength="12000" required placeholder="Что исправить или как переформулировать…"></textarea>
+      <p id="comment-error" class="comment-error" role="alert"></p>
+      <div class="button-row"><button id="comment-submit" class="primary-button" type="submit">Сохранить замечание</button><button id="comment-cancel" class="secondary-button" type="button">Отмена</button></div>
+    </form>
+  </dialog>
+</body>
+</html>

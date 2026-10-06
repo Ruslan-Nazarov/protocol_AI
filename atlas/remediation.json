@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "scope": "Сохранённые разрывы редакции 2026-10-03 и новые обязательства v0.4; карта всех 75 разделов в correctness_migration.json",
+  "origin": "agent_requirements_review",
+  "requirements": [
+    {
+      "id": "property_evidence",
+      "stage": "evidence",
+      "priority": 1,
+      "status": "implemented",
+      "source": "docs/UNCERTAINTY_REVIEW.md",
+      "criterion": "Формальное соответствие, смысл и внутреннее применение модели имеют отдельные статусы; неизвестное не становится успехом."
+    },
+    {
+      "id": "explicit_mode",
+      "stage": "evidence",
+      "priority": 1,
+      "status": "implemented",
+      "source": "PROTOCOL.md",
+      "criterion": "Режим проверки явно задан; формальный режим не завершается без выбранной логики и актуального свидетельства."
+    },
+    {
+      "id": "immutable_history",
+      "stage": "detectors",
+      "priority": 1,
+      "status": "implemented",
+      "source": "docs/LOGIC_ADAPTER.md",
+      "criterion": "Исходные кандидаты и отказы сохраняются; исправление не стирает ошибку; смена договора инвалидирует результат."
+    },
+    {
+      "id": "reference_corpus",
+      "stage": "benchmark",
+      "priority": 1,
+      "status": "implemented",
+      "source": "docs/UNCERTAINTY_REVIEW.md",
+      "criterion": "Ожидаемый результат задан до запуска проверяемого обнаружителя; есть корректные, неверные и неизвестные случаи."
+    },
+    {
+      "id": "detection_metrics",
+      "stage": "measurement",
+      "priority": 1,
+      "status": "implemented",
+      "source": "PROTOCOL.md",
+      "criterion": "Показатели имеют знаменатели, пропуски, ложные тревоги и неизвестное; нулевой знаменатель даёт null."
+    },
+    {
+      "id": "delay_coverage_cost",
+      "stage": "measurement",
+      "priority": 1,
+      "status": "implemented",
+      "source": "PROTOCOL.md",
+      "criterion": "Задержка отделена от длительности теста; охват ограничен корпусом; неизвестные расходы не обнуляются."
+    },
+    {
+      "id": "registered_admission",
+      "stage": "enforcement",
+      "priority": 1,
+      "status": "implemented",
+      "source": "docs/LOGIC_ADAPTER.md",
+      "criterion": "Выдача проверенного результата зарегистрированного этапа требует текущих свидетельств и возвращает только проверенную формулу."
+    },
+    {
+      "id": "external_isolation",
+      "stage": "enforcement",
+      "priority": 1,
+      "status": "environment_limit",
+      "source": "docs/LOGIC_ADAPTER.md",
+      "criterion": "Для внешних действий требуется отдельная защищённая среда; при её отсутствии подключение не называется принудительным контролем."
+    },
+    {
+      "id": "live_comparison",
+      "stage": "experiment",
+      "priority": 2,
+      "status": "implemented",
+      "source": "docs/UNCERTAINTY_REVIEW.md",
+      "criterion": "Зафиксированы модель, задачи, условия, бюджет и происхождение оценок; сравнение не подменяется тестами ядра."
+    },
+    {
+      "id": "latent_logic_use",
+      "stage": "experiment",
+      "priority": 2,
+      "status": "research_open",
+      "source": "memory/OPEN_QUESTIONS.md",
+      "criterion": "Определение и идентифицируемость фактического внутреннего применения логики остаются отдельным исследованием; численная оценка не выдумывается."
+    },
+    {
+      "id": "delivery",
+      "stage": "delivery",
+      "priority": 1,
+      "status": "implemented",
+      "source": "docs/UNCERTAINTY_REVIEW.md",
+      "criterion": "Режим, границы и свидетельства видны пользователю; CLI/MCP/HTTP, установка и регрессия согласованы."
+    },
+    {
+      "id": "joint_admission",
+      "stage": "enforcement",
+      "priority": 1,
+      "status": "open",
+      "source": "docs/VERIFICATION_MODES.md",
+      "criterion": "Для каждого ответа связать логическое и практическое свидетельства с отдельными утверждениями; оба обязательства нужны для допуска, неподдерживаемое остаётся открытым."
+    },
+    {
+      "id": "practice_adapters",
+      "stage": "evidence",
+      "priority": 1,
+      "status": "open",
+      "source": "PROTOCOL.md",
+      "criterion": "Определить и испытать предметные проверки программ, фактов, математики, инструкций и объяснений; проверять независимость и альтернативные причины наблюдений."
+    },
+    {
+      "id": "compiled_quality",
+      "stage": "experiment",
+      "priority": 2,
+      "status": "open",
+      "source": "docs/TOKEN_ECONOMY.md",
+      "criterion": "Сравнить компактные инструкции на отложенных задачах с одинаковыми бюджетами; измерить правильные/ошибочные допуски и потерянные правильные ответы, usage и расходы."
+    },
+    {
+      "id": "global_spend_gate",
+      "stage": "enforcement",
+      "priority": 2,
+      "status": "open",
+      "source": "docs/TOKEN_ECONOMY.md",
+      "criterion": "Связать все платные пути приложения с модельными лимитами, резервом расходов и числом попыток; символьный предел сборки не объявлять денежным контролем."
+    }
+  ],
+  "historical_questions": [
+    {
+      "topic": "C/D и прежние пункты регулятора",
+      "disposition": "historical",
+      "reason": "Не переносить прежние числовые правила на текущую редакцию без отдельного решения."
+    },
+    {
+      "topic": "Общая эффективность сжатия и смысловая достаточность памяти",
+      "disposition": "separate_research",
+      "reason": "Прошлые эксперименты не устанавливают эффективность нового логического режима."
+    },
+    {
+      "topic": "Понятность и пороги длины изложения",
+      "disposition": "human_evaluation",
+      "reason": "Автоматическая проверка формы не заменяет понимание читателя."
+    },
+    {
+      "topic": "Машиночитаемый протокол",
+      "disposition": "partially_implemented",
+      "reason": "Runtime и формальное ядро существуют; универсальная формализация содержания не реализована."
+    }
+  ]
+}

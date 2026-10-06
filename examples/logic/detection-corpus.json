@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "version": "2026-10-04-v1",
+  "property": "formal_conformance",
+  "reference_origin": "agent_authored_before_detector_run; not human acceptance",
+  "cases": [
+    {"id":"valid_s","symbol":"S","formula":["all","S","P"],"violation":false},
+    {"id":"valid_t","symbol":"T","formula":["all","T","P"],"violation":false},
+    {"id":"valid_g","symbol":"G","formula":["all","G","P"],"violation":false},
+    {"id":"wrong_registered","symbol":"S","formula":["all","M","P"],"violation":true},
+    {"id":"wrong_unregistered","symbol":"S","formula":["all","G","P"],"violation":true},
+    {"id":"reversed","symbol":"S","formula":["all","P","S"],"violation":true},
+    {"id":"wrong_operator","symbol":"S","formula":["no","S","P"],"violation":true},
+    {"id":"unsupported_quantifier","symbol":"S","formula":["some","S","P"],"violation":true},
+    {"id":"unicode","symbol":"S","formula":["all","Ѕ","P"],"violation":true},
+    {"id":"wrong_rule","symbol":"S","formula":["all","S","P"],"rule":"celarent","violation":true},
+    {"id":"missing_input","symbol":"S","formula":["all","S","P"],"inputs":["absent","p2"],"violation":true},
+    {"id":"stale","symbol":"S","formula":["all","S","P"],"stale":true,"violation":true}
+  ],
+  "excluded_properties": ["premise_truth","source_translation","actual_model_logic_use","all_possible_violations"]
+}

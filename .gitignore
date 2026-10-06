@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+build/
+runs/
+data/
+.protocol/
+# Machine-specific agent connections and editor settings
+.codex/
+.vscode/
+.idea/
+# Test output and local databases
+.pytest_cache/
+.coverage
+htmlcov/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+# Operating system metadata
+.DS_Store
+Thumbs.db

@@ -1,0 +1,971 @@
+{
+  "schema_version": 1,
+  "origin": "agent_review",
+  "source_sha256": "d87f21ac4a0807552e82c7c9d1bf086d44e16a1d184927f08e5d88e7cbba064d",
+  "sections": [
+    {
+      "section": "1",
+      "title": "1. Принципы",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Исходная позиция, полномочия и два обязательства.",
+      "basis_sha256": "829d1d5b944f730c387401d70b4e0b8713039a802260dfa11f6f4f8210087f5c",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Убрана обязательность диалектики; выбор логики, применение и ловушки стали принципами. Полномочия человека и статусы сохранены."
+    },
+    {
+      "section": "2",
+      "title": "2. Основы",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "d23e51a5b1f4b2c5600d56d57768b0c621dc1bde4ee84daf9e3a108cd07b0eb4",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Рабочий цикл отделён от логической системы. Определены выбор, договор, адаптер, допуск и границы формализации. Общее условие и область действия отделены от примеров; правильность выделения требования не устанавливается тестами реализации. 2026-10-03: добавлены исходная неопределённость, границы свидетельства, неизвестное и условия оценки улучшений; измерительная реализация не заявляется."
+    },
+    {
+      "section": "2.1",
+      "title": "2.1 Тип задачи",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "80c0f5969130da7a1180b3d0509ee5b392104a00ee78babba32e7e57f2e0313e",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Тип задачи помогает выбрать подходящий язык и способ проверки; сам по себе не выбирает логику автоматически."
+    },
+    {
+      "section": "2.2",
+      "title": "2.2 Объём задачи",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "ffeb7970c414d72a7f63bb229325cc8d08c134abdfbd94254f4985d440b92d15",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Смысловой и токенный объём сохранены; сжатие не разрешает потерю договора и оснований."
+    },
+    {
+      "section": "2.3",
+      "title": "2.3 Сложность задачи",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "e713bb4fe68c2539ca298dfecec27ff8b29c361e13348bea957c3426f63eaa1d",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Предварительная оценка сложности сохранена; числовой рейтинг способности модели не вводится."
+    },
+    {
+      "section": "2.4",
+      "title": "2.4 Адаптивное регулирование",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "fb3d90fa6a6341dcb4b0e5276b1ab3a6f64e532ab2f5df03891463115e6e2776",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Адаптация организации сохранена; изменение логики требует отдельной версии."
+    },
+    {
+      "section": "2.5",
+      "title": "2.5 Начало работы",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "b842f0265895d1f55ca2b5d082cd8e8f39c7d5cc5b21569ca10405dfdb8a9221",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Добавлены выбор логики и явное обозначение неподдерживаемого режима; постановку составляет агент."
+    },
+    {
+      "section": "2.6",
+      "title": "2.6 Применение настройки",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "784e3a96a1ad4c69289ca5a00041b1dc0f087b6541004b92b949a3dad3906d42",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Восстановление точного договора, словаря и ловушек добавлено к сборке контекста."
+    },
+    {
+      "section": "2.7",
+      "title": "2.7 Проверка и изменение",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "6f299f711649d6cf0a9bc2e7db003b8fe5f59eed4cd06849a09609de89381ad7",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Смена логики, посылки или смысла термина вызывает версионный пересмотр; прежняя ошибка остаётся."
+    },
+    {
+      "section": "2.8",
+      "title": "2.8 Подключение механизма",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Построение кандидата, доказательство применения, совместное признание.",
+      "basis_sha256": "75b26664c460f6a995bffb014d3ca667cf47d9c01469ead8b320316410be72c8",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Названы операции select_logic/check_logic и честная граница контроля внешних действий."
+    },
+    {
+      "section": "3",
+      "title": "3. Надёжность и проверяемость",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Заранее заданные критерии, статусы и ограниченные свидетельства.",
+      "basis_sha256": "853e6f34bbf88396996d4685a8abff545c0fa7994905a96bad1fd37c07264611",
+      "related_files": [
+        "protocol_atlas/task_analysis.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_script_runtime.py"
+      ],
+      "previous_note": "Статусы, предметные проверки и человеческое рассмотрение сохранены."
+    },
+    {
+      "section": "3.1",
+      "title": "3.1 Постановка задачи",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Заранее заданные критерии, статусы и ограниченные свидетельства.",
+      "basis_sha256": "0ac81df1eb4394a51ac50af36c38179e0ea2a7433a9be7d82a2d5ad9d0c9d8e2",
+      "related_files": [
+        "protocol_atlas/task_analysis.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_script_runtime.py"
+      ],
+      "previous_note": "Постановка включает основание выбора логики, адаптер и ожидаемые отклонения."
+    },
+    {
+      "section": "3.2",
+      "title": "3.2 Статусы утверждений",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Заранее заданные критерии, статусы и ограниченные свидетельства.",
+      "basis_sha256": "244443da289df35b9df5234d78c28b2765d89fa4ce2c42f26311013020b707ed",
+      "related_files": [
+        "protocol_atlas/task_analysis.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_script_runtime.py"
+      ],
+      "previous_note": "Разделены выводимость, истинность посылок и точность перевода; сертификат имеет ограниченный предмет."
+    },
+    {
+      "section": "3.3",
+      "title": "3.3 Отчёт о результате",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Заранее заданные критерии, статусы и ограниченные свидетельства.",
+      "basis_sha256": "6b4eaf31dec537875d897eef16952bde1092d8c59eb28642d57a84b7e48b61eb",
+      "related_files": [
+        "protocol_atlas/task_analysis.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_script_runtime.py"
+      ],
+      "previous_note": "Отчёт по сделанному, проверенному и неполному сохранён; опирается на реальные события."
+    },
+    {
+      "section": "3.4",
+      "title": "3.4 Проверка человеком",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Заранее заданные критерии, статусы и ограниченные свидетельства.",
+      "basis_sha256": "c24ca8c1de86df46b93a685ecf73bc133b5d3a3e8ca2054491455bd7208a3245",
+      "related_files": [
+        "protocol_atlas/task_analysis.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_script_runtime.py"
+      ],
+      "previous_note": "Человек рассматривает пригодность и смысл; его суждение не заменяет исполнимую проверку."
+    },
+    {
+      "section": "4",
+      "title": "4. Долгая работа: память и непрерывность",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Память оснований и повторное использование проверенного.",
+      "basis_sha256": "81764556e5047a0c45a2dca6e8c14c81cbda314b20e3de9560138f03e501cda3",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/memory.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Версионная память сохранена как основание продолжения, теперь также для логического договора."
+    },
+    {
+      "section": "4.1",
+      "title": "4.1 Как возникает память проекта",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Память оснований и повторное использование проверенного.",
+      "basis_sha256": "189100dd7ee45ea646cc719eb6d10c899493e913c1f047f4412e3fcaedded86c",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/memory.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Отделение действующего от исторического сохранено; одна переписка не является актуальной памятью."
+    },
+    {
+      "section": "4.2",
+      "title": "4.2 Запись решения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Память оснований и повторное использование проверенного.",
+      "basis_sha256": "cbd2cf043dfccb3077c6a0a93aea0d0a82023798a65adee57879e4450828f402",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/memory.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Решение хранит происхождение и основания; название выбранной логики тоже не удостоверяет его правильность."
+    },
+    {
+      "section": "4.3",
+      "title": "4.3 Начало сессии",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Память оснований и повторное использование проверенного.",
+      "basis_sha256": "75eb07fc3d6e24681fe482625fcffeeb0b8a5cd23a10f1bf713a1dafb040cd5d",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/memory.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Восстанавливаются закреплённые логика и версия ядра; резюме не пересоздаёт эталон."
+    },
+    {
+      "section": "4.4",
+      "title": "4.4 Изменение памяти в работе и завершение сессии",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Память оснований и повторное использование проверенного.",
+      "basis_sha256": "0ba77cb3b263666ea96be155850a217c0c321014a3a81dfbc1993d25cc3c336e",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/memory.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Сохраняются история изменения договора и исходные ошибки ловушек."
+    },
+    {
+      "section": "4.5",
+      "title": "4.5 Как сохранённая память входит в работу ИИ",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Память оснований и повторное использование проверенного.",
+      "basis_sha256": "d18c7f867d2bb3066e312c9a6ed01050523dbe2e98ab583b0791938a1c84bf5b",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/memory.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Хранение, чтение и включение в запрос по-прежнему различаются; внешняя память не обещается."
+    },
+    {
+      "section": "5",
+      "title": "5. Безопасность и границы",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Полномочия и безопасность практического действия.",
+      "basis_sha256": "6bab895d9d2006fc874a99602a7501483aaffa48ddb45f1aff3c56aec5bbed56",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Границы полномочий сохранены; логическое доказательство не выдаёт разрешения на действие."
+    },
+    {
+      "section": "5.1",
+      "title": "5.1 Уровни действий",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Полномочия и безопасность практического действия.",
+      "basis_sha256": "847b50508c7b3f056080b52dad0b488d7f6171c586a26dead2633142d8955782",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Существующее поручение остаётся разрешением в своих границах; новых общих согласований не добавлено."
+    },
+    {
+      "section": "5.2",
+      "title": "5.2 Источники инструкций",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Полномочия и безопасность практического действия.",
+      "basis_sha256": "1933b599029de46d423524e8bdfcb75f144ae9ca2b4c401c31dd95c700cea14c",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Источник данных не вправе менять выбранную логику и соглашения."
+    },
+    {
+      "section": "5.3",
+      "title": "5.3 Чувствительные данные",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Полномочия и безопасность практического действия.",
+      "basis_sha256": "5d59eceb1806a046ef7638d6b7570211dbf51027d3ff5ffe2ff4997022397e17",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Секреты и минимизация передаваемых данных сохранены; сырые кандидаты не должны содержать ключи."
+    },
+    {
+      "section": "5.4",
+      "title": "5.4 Право ИИ на возражение",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Полномочия и безопасность практического действия.",
+      "basis_sha256": "1debe578bb67b8094b618a1d5329adfd988b0805e67ee44171d83a0ae234c5ac",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Критика обязательной диалектичности заменена критикой конкретного нарушения выбранной логики и оснований."
+    },
+    {
+      "section": "6",
+      "title": "6. Исследовательская работа",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Посылки, независимые источники, опровержение и альтернативы.",
+      "basis_sha256": "d1fa35aafd5a67986fe07cb62aa6aec6ffbe24fd0c02535ce4bfb1de1fed58a9",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/math_checks.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Исследовательские требования сохранены; формальный вывод остаётся частью исследования."
+    },
+    {
+      "section": "6.1",
+      "title": "6.1 Разделение слоёв",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Посылки, независимые источники, опровержение и альтернативы.",
+      "basis_sha256": "6ba2ecac63dc99100d8e3cb0839f6893ef8ccc9016c9b41dd9e168a4b831fe7f",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/math_checks.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Различие факта, интерпретации и гипотезы сохранено; формальный статус не делает допущение фактом."
+    },
+    {
+      "section": "6.2",
+      "title": "6.2 Источники",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Посылки, независимые источники, опровержение и альтернативы.",
+      "basis_sha256": "9e23339572ca6c9ed8989ea6562d61726f0b786b4af1484d510e0df1f1f3ee2c",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/math_checks.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Точные источники и запрет выдуманной библиографии сохранены; истинность источника проверяется отдельно."
+    },
+    {
+      "section": "6.3",
+      "title": "6.3 Формулы и вычисления",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Посылки, независимые источники, опровержение и альтернативы.",
+      "basis_sha256": "5fdc54d827914ea300ff29cf81f166c4c128eafbf4004512bb38e98e0ee26068",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/math_checks.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Переход формулы связан с выбранным правилом; предметный смысл отделён от формальной корректности."
+    },
+    {
+      "section": "6.4",
+      "title": "6.4 Гипотезы",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Посылки, независимые источники, опровержение и альтернативы.",
+      "basis_sha256": "bb9bc129abb087d0051fde79c13b7bcf938d1e0de394e40e6bbdd8dd4c803e38",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/math_checks.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Поиск контрпримеров сохранён; он дополняет тесты ловушек, не заменяя их."
+    },
+    {
+      "section": "6.5",
+      "title": "6.5 Против угодничества",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Посылки, независимые источники, опровержение и альтернативы.",
+      "basis_sha256": "1f9e982091ab2a11688b4c920c21b3fa3b099d7aacf5d6eaea68f1d31b631f42",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "protocol_atlas/math_checks.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Аргументированное несогласие сохранено; выбор логики может быть оспорен."
+    },
+    {
+      "section": "7",
+      "title": "7. Сообщение ИИ о результате работы",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Отчёт о признанной части и незавершённых проверках.",
+      "basis_sha256": "6c0826a897a3da2ac0c0d620549b102c7a624f641df5e3ff4f8cd9d402b7f6ce",
+      "related_files": [
+        "protocol_atlas/task_analysis.py",
+        "tests/test_script_runtime.py"
+      ],
+      "previous_note": "Отчёт сохраняет предмет проверки, допущения и продолжение; внутреннее мышление не запрашивается."
+    },
+    {
+      "section": "8",
+      "title": "8. Форма изложения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "c7c9b47b1081a377a6e7b2454cbea5c84bc5c2988ed1936f48711796bdf6b73b",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Форма обоснования подчиняется выбранной логике; диалектический словарь не становится универсальным."
+    },
+    {
+      "section": "8.1",
+      "title": "8.1 Как объяснять и обосновывать",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "92445c31997e913afa1fed7d4c99b2f97914fc8104aeeccd78d915bb0187a9c8",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Содержательная последовательность объяснения сохранена как требование чтения, не как формальный вывод."
+    },
+    {
+      "section": "8.1.1",
+      "title": "8.1.1 Развитие содержания",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "e4b86ce707f901d16f1e296369b2a4ba03fcfed44dfd50c5215b8d3b1fb35585",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Связь исходного и результата сохранена; её вид определяется выбранной системой."
+    },
+    {
+      "section": "8.1.2",
+      "title": "8.1.2 Понятное начало ответа",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "1102f74819655b7ab2a584bdb1fbc54aa565488ffa984391b6c78d617c9c87f6",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Понятное начало сохранено; пригодность оценивает читатель."
+    },
+    {
+      "section": "8.1.3",
+      "title": "8.1.3 Введение понятий",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "b1cfae8f7333445ba2dd8ec9b1b76f9bc5c26a6ad2fb249d6df590b3579aeb68",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Введение понятия сохранено; формальный реестр не заменяет объяснение смысла."
+    },
+    {
+      "section": "8.1.4",
+      "title": "8.1.4 Объяснение в месте необходимости",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "63af2c64751d11580a687c14b350544323aec8adf4a641d1f4cb5477c7e0ed9a",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Раскрытие нужного основания на месте сохранено."
+    },
+    {
+      "section": "8.1.5",
+      "title": "8.1.5 Однозначные обозначения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "86c8de74d8510c420ee570b426109bdbbcf1b7afb9f9134ebd9e910d15df2f30",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Добавлены устойчивые id, обозначения, область и версия переименования. Ловушка проверяет соответствие ожидаемому символу в данной позиции; G — только пример возможной подмены."
+    },
+    {
+      "section": "8.1.6",
+      "title": "8.1.6 Полнота оснований",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "f675f7efec8cd42b9a95e6318efbfae54a1c215272e48a6f0217728c4b578215",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Сохранение условий и полноты оснований оставлено; код не обнаруживает любую пропущенную посылку в свободном тексте."
+    },
+    {
+      "section": "8.1.7",
+      "title": "8.1.7 Недостающие сведения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "d89ad70dc43c947e37b8b2cdfa3bd224870d947c14281135752e0287a558e4cd",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Недостающие основания не достраиваются молча; независимая работа может продолжаться."
+    },
+    {
+      "section": "8.1.8",
+      "title": "8.1.8 Обоснование перехода",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "d0910893614176f5d9bd58f39e045cfe268728f778cceff759869e4291a34e8b",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Обоснование связано с правилом и входами; граф ссылок не выдаётся за доказательство."
+    },
+    {
+      "section": "8.1.9",
+      "title": "8.1.9 Смысл формулы",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "f5b203f2c09fb6b755c3d695e59c5d16a3da0f45e16463b007ecae0bf1b6bf70",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Смысл величин и применимость сохранены отдельно от синтаксиса формулы."
+    },
+    {
+      "section": "8.1.10",
+      "title": "8.1.10 Обоснование выбора",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "66d02687e0756ced6e5abbc85381b75be7de710df1d994dfd3a8b3ee7c2a5c28",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Обоснование существенного выбора сохранено и применяется к выбору логики."
+    },
+    {
+      "section": "8.1.11",
+      "title": "8.1.11 Основания оценки",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "a710cd20d78dc3efa12439f592bc2f57432eab6a43faa0bf56f168dd7cb87530",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Критерий оценки сохранён; оценка агента не становится свидетельством исполнения."
+    },
+    {
+      "section": "8.1.12",
+      "title": "8.1.12 Статус и основание утверждения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "579738c9beeb065be9584dd6cae727d29737226295604354caed4340bc87ec42",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Статусы применяются к отдельным утверждениям, не распространяются на весь ответ."
+    },
+    {
+      "section": "8.1.13",
+      "title": "8.1.13 Границы применения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "10d1df3324a4f20733271e42e0f6d7c85f83868d97221beebd949721cb3f801a",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Область и ограничения результата сохранены, в формальном режиме закреплены договором."
+    },
+    {
+      "section": "8.1.14",
+      "title": "8.1.14 Посильный объём этапа",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "4b0578c38affc150ff7f39c059224d8c4df0df1587075311ab74d8f0232c42fb",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Разделение объёма при пропусках сохранено; основано на наблюдении, не на выдуманном пороге."
+    },
+    {
+      "section": "8.1.15",
+      "title": "8.1.15 Абзацы и структура документа",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "af434296dd822bbd848e1235bcb478b382780e311f7aa8e91109e6312188ad36",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Абзацы и навигация сохранены как рабочие ориентиры чтения."
+    },
+    {
+      "section": "8.2",
+      "title": "8.2 Как строится ответ",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "b29642680b3d30eb75305b6d7c6e6e15b7beab78b4fed4c8139fd4ac33cf55e1",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Связное построение ответа сохранено; техническая схема не навязывает одинаковые рубрики."
+    },
+    {
+      "section": "8.3",
+      "title": "8.3 Как учитывается понимание читателя",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "2cb6ed33f980d960a9b14b0e582527e02e895baa5c41807c786947f948688648",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Профиль читателя и происхождение подтверждения сохранены; понимание не выводится из молчания."
+    },
+    {
+      "section": "8.4",
+      "title": "8.4 Как сокращается текст",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "7981bde3f1d85a5e31b145b87790f50f5aa1247b51353e1ce6fc8c42c1fe0b73",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Сокращение сохраняет необходимые посылки и условия."
+    },
+    {
+      "section": "8.5",
+      "title": "8.5 Как проверяется изложение",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "4c0b8daedc0c5e146ed59e8bfb8014cbb5016e476ef77d80cb6a035ba3f8767f",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Канонический логический результат отделён от эвристик и свободного пересказа."
+    },
+    {
+      "section": "8.6",
+      "title": "8.6 Краткие служебные сообщения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Понятность доказательства и возможность применить ответ.",
+      "basis_sha256": "10687b70f44e96e261584bc8a415eaf2edeff901871d18bfa43707a734e2ccab",
+      "related_files": [
+        "protocol_atlas/answer_checks.py",
+        "protocol_atlas/logic.py",
+        "tests/test_reader.py"
+      ],
+      "previous_note": "Краткие служебные ответы сохранены; пример оценки связан с выбранной логикой."
+    },
+    {
+      "section": "9",
+      "title": "9. Организация сложной задачи",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Обе обязанности в этапах и пересмотр зависимостей.",
+      "basis_sha256": "c0f6a604fd42cb7f531adca582c766e84c921bfd950af10d7291c977b8443bd5",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Этапы и зависимости сохранены как организация исполнения выбранной логики."
+    },
+    {
+      "section": "9.1",
+      "title": "9.1 Как выделяется этап работы",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Обе обязанности в этапах и пересмотр зависимостей.",
+      "basis_sha256": "c4996f9d7def907deb8c49d0898a95d0f90f285b34f760bcfd2c900b78ee1c08",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Передача вывода включает посылки, область, договор и свидетельство."
+    },
+    {
+      "section": "9.2",
+      "title": "9.2 Как устанавливается порядок",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Обе обязанности в этапах и пересмотр зависимостей.",
+      "basis_sha256": "096ca477029e01fff7178fe6c0bdaf7a8232b3e6432e7e9e011a5185654ff54a",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Порядок определяется зависимостями; общий результат проверяется после сборки."
+    },
+    {
+      "section": "9.3",
+      "title": "9.3 Как выбирается и изменяется схема",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Обе обязанности в этапах и пересмотр зависимостей.",
+      "basis_sha256": "9d86642ee0050f96ee4db50add7ade26f87502a3c39ee6ccdb29a16de4676843",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Пересборка плана не отключает подключённую логику и её проверку."
+    },
+    {
+      "section": "9.4",
+      "title": "9.4 Как происходит возврат к основанию",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Обе обязанности в этапах и пересмотр зависимостей.",
+      "basis_sha256": "888935ed0fec8b36071b8dfcc4fc7c70db39529cb977cab34e14edb2f7643945",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "tests/test_logic.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Возврат к основанию сохранён; новое основание требует повторной проверки следствий."
+    },
+    {
+      "section": "10",
+      "title": "10. Приоритет практики",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Каждый ответ проходит практику, её условия и пределы.",
+      "basis_sha256": "044ec2755948559a76d39c97f4538b0c306594564496694e67de661f7b85c818",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "scripts/verify_logic_core.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Предметная практика сохранена; она не смешивается с формальной выводимостью."
+    },
+    {
+      "section": "10.1",
+      "title": "10.1 Как выбирается основание проверки",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Каждый ответ проходит практику, её условия и пределы.",
+      "basis_sha256": "61a40c5a46e803badeb26033dfc40c13196c4b5ea694489b33df5f6c6cac2f2c",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "scripts/verify_logic_core.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Добавлены положительные и отрицательные испытания самих обнаружителей."
+    },
+    {
+      "section": "10.2",
+      "title": "10.2 Как результат проверки меняет работу",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Каждый ответ проходит практику, её условия и пределы.",
+      "basis_sha256": "b1beddd5cb6ec81a4d851092baa34e2add8bfcdd99fa9b2b064e11b6e688ab4a",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "scripts/verify_logic_core.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Отсутствие или неопределённость обязательной проверки не открывает логический допуск."
+    },
+    {
+      "section": "10.3",
+      "title": "10.3 Как проверяются тексты и объяснения",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Каждый ответ проходит практику, её условия и пределы.",
+      "basis_sha256": "4a4e5b2507058fc55b8836724d8383b1b83ea12c5557b72d51f9514e21697316",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "scripts/verify_logic_core.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Проверка объяснений чтением и применением сохранена; автоматическая понятность не заявлена."
+    },
+    {
+      "section": "10.4",
+      "title": "10.4 Как используются внешние сведения",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Каждый ответ проходит практику, её условия и пределы.",
+      "basis_sha256": "d2b9f7d4f5270a85f91355c4a740b03d2969f7db73f3d7cf31b641a7907677d4",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "scripts/verify_logic_core.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Актуальность внешних сведений сохранена; источник не становится безусловной истиной."
+    },
+    {
+      "section": "11",
+      "title": "11. Учёт и восстановление хода работы",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Экономия контекста и измерение правильных/ошибочных допусков.",
+      "basis_sha256": "6d38e20e461a46de2cad65931a0017ea0d051b264da495da315b60cf8dc76387",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Доступные свидетельства и расход сохранены; отсутствие данных не заполняется догадкой."
+    },
+    {
+      "section": "11.1",
+      "title": "11.1 Как учитывается расход токенов",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Экономия контекста и измерение правильных/ошибочных допусков.",
+      "basis_sha256": "5c83c9e9d4b60e4acd6e68d86565c5d87cca56e8b1dcbb92a460b32b0d8ae622",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Расход по счётчикам среды сохранён; короткие локальные тесты не расходуют API-токены."
+    },
+    {
+      "section": "11.2",
+      "title": "11.2 Как сохраняется ход выполнения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Экономия контекста и измерение правильных/ошибочных допусков.",
+      "basis_sha256": "a19ec8927af720af1f183d4f1fb32de70a43425affca5ca3b6ecafe4939ced06",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Добавлены исходный кандидат, место отказа, версии договора и ядра."
+    },
+    {
+      "section": "11.3",
+      "title": "11.3 Как наблюдения изменяют способ работы",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Экономия контекста и измерение правильных/ошибочных допусков.",
+      "basis_sha256": "accf9ae14a06143c3be21d2b141dd70d5849eb2846ca702192ad0a3585753367",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Наблюдения могут менять организацию; повтор ошибки сам по себе не устанавливает причину."
+    },
+    {
+      "section": "11.4",
+      "title": "11.4 Как устанавливается срок хранения",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Экономия контекста и измерение правильных/ошибочных допусков.",
+      "basis_sha256": "1aef575a555fbf70d13bd634d1c084dfb22c1cdb6286b165c175cb84484dacc4",
+      "related_files": [
+        "protocol_atlas/project_runtime.py",
+        "protocol_atlas/adaptive.py",
+        "tests/test_project_runtime.py"
+      ],
+      "previous_note": "Свидетельства незавершённого разбора сохраняются; хеш не заменяет исходный материал."
+    },
+    {
+      "section": "12",
+      "title": "12. Разбор ошибок",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Ошибки ответа и механизма его признания.",
+      "basis_sha256": "7044e4c3b65e58e76ea1d1f24fb0f3a4d2ef067554d47672a497a36eda62e445",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Разбор ошибки дополнен её заблаговременным ожиданием и обнаружением."
+    },
+    {
+      "section": "12.1",
+      "title": "12.1 Как устанавливается ошибка",
+      "decision": "переработан или дополнен",
+      "note": "Дополнен/переработан; прежние правила сохранены кроме явно перечисленных замен. Ошибки ответа и механизма его признания.",
+      "basis_sha256": "b9c0fe870bce7396803cb3e1fa762c67b2ed504699a2bdd3da689624653c83e7",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Срабатывание ловушки регистрирует ожидаемое, фактическое, место и версию без ожидания жалобы."
+    },
+    {
+      "section": "12.2",
+      "title": "12.2 Как исследуется причина",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Ошибки ответа и механизма его признания.",
+      "basis_sha256": "ad3356e7e572fb6f3df51b2a6d79a74377806e45a282377483ea9d749c878fc1",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Различение отсутствующего, неприменённого и недостаточного правила сохранено."
+    },
+    {
+      "section": "12.3",
+      "title": "12.3 Как исправление становится проверяемым",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Ошибки ответа и механизма его признания.",
+      "basis_sha256": "861106ad41d1f86ef28f9f344ed54950c1239f77c0ee5d21740beabd9fae0f07",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Исправление ловушки требует воспроизведения пропуска и корректного контроля; обход допуска рассматривается отдельно."
+    },
+    {
+      "section": "12.4",
+      "title": "12.4 Как проверяется и сохраняется результат",
+      "decision": "сохранён",
+      "note": "Текст сохранён. Ошибки ответа и механизма его признания.",
+      "basis_sha256": "dd037e3e98e0a349405de5cf5b0332af16eee220f184986d84753d8c278412de",
+      "related_files": [
+        "protocol_atlas/logic.py",
+        "tests/test_logic.py"
+      ],
+      "previous_note": "Исправление, проверка и человеческое принятие сохраняют разные статусы."
+    }
+  ],
+  "limits": "Coverage and hashes prove that each numbered section has a current review entry, not semantic correctness or complete enforcement."
+}

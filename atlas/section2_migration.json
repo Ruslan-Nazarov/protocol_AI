@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "old_source": "docs/history/before-section2-20261004/PROTOCOL.md",
+  "old_sha256": "03a2ca8333643af704ac4f3482a7bdc691b02dc033a0985aed5af8ce45a5acfc",
+  "new_sha256": "80560dcfdad76d834f71b4a0dc5fcb1214d589b0adc8438953671fa9fe05a9c4",
+  "old_section_sha256": "1203fdb56a77fd41e73c63f68c24f38949ed6a2d337c123eb45bccaf84c217fd",
+  "new_section_sha256": "c47e5a4676a2834cada37f2f9380780b2f264aded1f2722228196e83c9f6eca9",
+  "old_characters": 18369,
+  "new_characters": 6990,
+  "scope": "Only section 2, including subsections; outside text unchanged.",
+  "meaning_review": "docs/SECTION2_REVISION.md",
+  "new_source": "docs/history/before-execution-20261004/PROTOCOL.md"
+}

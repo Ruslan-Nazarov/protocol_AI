@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "old_source": "docs/history/before-execution-20261004/PROTOCOL.md",
+  "old_sha256": "80560dcfdad76d834f71b4a0dc5fcb1214d589b0adc8438953671fa9fe05a9c4",
+  "new_sha256": "5f705115e9c3fd10f07a980cdb7f4050b952a6c9ce54a4ae934f769b9096a3a9",
+  "sections": [
+    {
+      "old_section": "1",
+      "old_title": "1. Принципы",
+      "old_basis_sha256": "af202e817c083ae71d978562192acd3fcc7eaf2e902d9d1604f6d64b0299e43b",
+      "new_rules": [
+        "2.1",
+        "3.1",
+        "4.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2",
+      "old_title": "2. Как выполняется работа",
+      "old_basis_sha256": "ccf6bd191fc60bcec2da190772bf33b527ed2c37c863eaf4456621df25b011ea",
+      "new_rules": [
+        "2.1",
+        "3.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2.1",
+      "old_title": "2.1 От задачи к её предмету",
+      "old_basis_sha256": "55df703bccd0cc37f3cbb0abe1a99f9b8e1544bdb11604fcd9fed7f0df2b80ec",
+      "new_rules": [
+        "1.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2.2",
+      "old_title": "2.2 Выбор посильного шага",
+      "old_basis_sha256": "321ad07046fc86398c73865caff3cb73129998ab9f5eab3252cbf2b8815b01d8",
+      "new_rules": [
+        "4.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2.3",
+      "old_title": "2.3 Получение следующего вывода",
+      "old_basis_sha256": "117e2c46269f0fea4f09d2dba0aaa54ddfce22492932ddfa80b38164aa785696",
+      "new_rules": [
+        "2.1",
+        "3.1",
+        "6.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2.4",
+      "old_title": "2.4 Подготовка столкновения с реальностью",
+      "old_basis_sha256": "2f8b31e744663cfb5f2b45c77b26f3c3e2119e3c895db55276e2322f59f923e1",
+      "new_rules": [
+        "4.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2.5",
+      "old_title": "2.5 Закрепление условий выполнения",
+      "old_basis_sha256": "f4256317d20a8cb60344579e4ce0a0eda37ab673be2f50ac188970f0add82288",
+      "new_rules": [
+        "3.2",
+        "5.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2.6",
+      "old_title": "2.6 Построение ответа",
+      "old_basis_sha256": "985c10eebc6153d7a86f439497e74ab55963f4bd1439b61493ec3249a56a5995",
+      "new_rules": [
+        "3.2",
+        "5.2",
+        "6.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2.7",
+      "old_title": "2.7 Проверка результата и возврат",
+      "old_basis_sha256": "20aebf08b7084563912b752887d2fd675bfefa089a22900f354ab7f226809bd1",
+      "new_rules": [
+        "7.3",
+        "8.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "2.8",
+      "old_title": "2.8 Продолжение по результатам",
+      "old_basis_sha256": "4faace7bc74696076e518d69daef35abf77ba3cd275050b1ebe61aac9ba85861",
+      "new_rules": [
+        "10.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "3",
+      "old_title": "3. Надёжность и проверяемость",
+      "old_basis_sha256": "853e6f34bbf88396996d4685a8abff545c0fa7994905a96bad1fd37c07264611",
+      "new_rules": [
+        "1.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "3.1",
+      "old_title": "3.1 Постановка задачи",
+      "old_basis_sha256": "0ac81df1eb4394a51ac50af36c38179e0ea2a7433a9be7d82a2d5ad9d0c9d8e2",
+      "new_rules": [
+        "1.1",
+        "4.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "3.2",
+      "old_title": "3.2 Статусы утверждений",
+      "old_basis_sha256": "244443da289df35b9df5234d78c28b2765d89fa4ce2c42f26311013020b707ed",
+      "new_rules": [
+        "6.4"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "3.3",
+      "old_title": "3.3 Отчёт о результате",
+      "old_basis_sha256": "6b4eaf31dec537875d897eef16952bde1092d8c59eb28642d57a84b7e48b61eb",
+      "new_rules": [
+        "9.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "3.4",
+      "old_title": "3.4 Проверка человеком",
+      "old_basis_sha256": "c24ca8c1de86df46b93a685ecf73bc133b5d3a3e8ca2054491455bd7208a3245",
+      "new_rules": [
+        "3.3",
+        "9.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "4",
+      "old_title": "4. Долгая работа: память и непрерывность",
+      "old_basis_sha256": "81764556e5047a0c45a2dca6e8c14c81cbda314b20e3de9560138f03e501cda3",
+      "new_rules": [
+        "1.1",
+        "10.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "4.1",
+      "old_title": "4.1 Как возникает память проекта",
+      "old_basis_sha256": "189100dd7ee45ea646cc719eb6d10c899493e913c1f047f4412e3fcaedded86c",
+      "new_rules": [
+        "1.1",
+        "10.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "4.2",
+      "old_title": "4.2 Запись решения",
+      "old_basis_sha256": "cbd2cf043dfccb3077c6a0a93aea0d0a82023798a65adee57879e4450828f402",
+      "new_rules": [
+        "10.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "4.3",
+      "old_title": "4.3 Начало сессии",
+      "old_basis_sha256": "75eb07fc3d6e24681fe482625fcffeeb0b8a5cd23a10f1bf713a1dafb040cd5d",
+      "new_rules": [
+        "1.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "4.4",
+      "old_title": "4.4 Изменение памяти в работе и завершение сессии",
+      "old_basis_sha256": "0ba77cb3b263666ea96be155850a217c0c321014a3a81dfbc1993d25cc3c336e",
+      "new_rules": [
+        "10.1",
+        "10.4"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "4.5",
+      "old_title": "4.5 Как сохранённая память входит в работу ИИ",
+      "old_basis_sha256": "d18c7f867d2bb3066e312c9a6ed01050523dbe2e98ab583b0791938a1c84bf5b",
+      "new_rules": [
+        "5.1",
+        "10.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "5",
+      "old_title": "5. Безопасность и границы",
+      "old_basis_sha256": "6bab895d9d2006fc874a99602a7501483aaffa48ddb45f1aff3c56aec5bbed56",
+      "new_rules": [
+        "1.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "5.1",
+      "old_title": "5.1 Уровни действий",
+      "old_basis_sha256": "847b50508c7b3f056080b52dad0b488d7f6171c586a26dead2633142d8955782",
+      "new_rules": [
+        "1.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "5.2",
+      "old_title": "5.2 Источники инструкций",
+      "old_basis_sha256": "1933b599029de46d423524e8bdfcb75f144ae9ca2b4c401c31dd95c700cea14c",
+      "new_rules": [
+        "1.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "5.3",
+      "old_title": "5.3 Чувствительные данные",
+      "old_basis_sha256": "5d59eceb1806a046ef7638d6b7570211dbf51027d3ff5ffe2ff4997022397e17",
+      "new_rules": [
+        "5.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "5.4",
+      "old_title": "5.4 Право ИИ на возражение",
+      "old_basis_sha256": "1debe578bb67b8094b618a1d5329adfd988b0805e67ee44171d83a0ae234c5ac",
+      "new_rules": [
+        "1.2",
+        "8.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "6",
+      "old_title": "6. Исследовательская работа",
+      "old_basis_sha256": "d1fa35aafd5a67986fe07cb62aa6aec6ffbe24fd0c02535ce4bfb1de1fed58a9",
+      "new_rules": [
+        "2.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "6.1",
+      "old_title": "6.1 Разделение слоёв",
+      "old_basis_sha256": "6ba2ecac63dc99100d8e3cb0839f6893ef8ccc9016c9b41dd9e168a4b831fe7f",
+      "new_rules": [
+        "6.4"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "6.2",
+      "old_title": "6.2 Источники",
+      "old_basis_sha256": "9e23339572ca6c9ed8989ea6562d61726f0b786b4af1484d510e0df1f1f3ee2c",
+      "new_rules": [
+        "2.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "6.3",
+      "old_title": "6.3 Формулы и вычисления",
+      "old_basis_sha256": "5fdc54d827914ea300ff29cf81f166c4c128eafbf4004512bb38e98e0ee26068",
+      "new_rules": [
+        "6.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "6.4",
+      "old_title": "6.4 Гипотезы",
+      "old_basis_sha256": "bb9bc129abb087d0051fde79c13b7bcf938d1e0de394e40e6bbdd8dd4c803e38",
+      "new_rules": [
+        "4.1",
+        "7.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "6.5",
+      "old_title": "6.5 Против угодничества",
+      "old_basis_sha256": "1f9e982091ab2a11688b4c920c21b3fa3b099d7aacf5d6eaea68f1d31b631f42",
+      "new_rules": [
+        "6.4"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "7",
+      "old_title": "7. Сообщение ИИ о результате работы",
+      "old_basis_sha256": "6c0826a897a3da2ac0c0d620549b102c7a624f641df5e3ff4f8cd9d402b7f6ce",
+      "new_rules": [
+        "9.2",
+        "10.4"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8",
+      "old_title": "8. Форма изложения",
+      "old_basis_sha256": "2f2197f8feb7905c37be5cee87a8048d627e324e52099694cf583809a6f51fcd",
+      "new_rules": [
+        "2.1",
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1",
+      "old_title": "8.1 Как объяснять и обосновывать",
+      "old_basis_sha256": "fd74d5343462b927383376356e225269d7ff343e3fb88256749b2a1c1436c182",
+      "new_rules": [
+        "2.1",
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.1",
+      "old_title": "8.1.1 Развитие содержания",
+      "old_basis_sha256": "6ca472605dc0eb86bd890b3c0d0d123f917796bb1ca9d6dec11d91d298d40755",
+      "new_rules": [
+        "2.1",
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.2",
+      "old_title": "8.1.2 Понятное начало ответа",
+      "old_basis_sha256": "1102f74819655b7ab2a584bdb1fbc54aa565488ffa984391b6c78d617c9c87f6",
+      "new_rules": [
+        "1.3",
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.3",
+      "old_title": "8.1.3 Введение понятий",
+      "old_basis_sha256": "b1cfae8f7333445ba2dd8ec9b1b76f9bc5c26a6ad2fb249d6df590b3579aeb68",
+      "new_rules": [
+        "1.3",
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.4",
+      "old_title": "8.1.4 Объяснение в месте необходимости",
+      "old_basis_sha256": "63af2c64751d11580a687c14b350544323aec8adf4a641d1f4cb5477c7e0ed9a",
+      "new_rules": [
+        "1.3",
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.5",
+      "old_title": "8.1.5 Однозначные обозначения",
+      "old_basis_sha256": "86c8de74d8510c420ee570b426109bdbbcf1b7afb9f9134ebd9e910d15df2f30",
+      "new_rules": [
+        "2.3",
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.6",
+      "old_title": "8.1.6 Полнота оснований",
+      "old_basis_sha256": "f675f7efec8cd42b9a95e6318efbfae54a1c215272e48a6f0217728c4b578215",
+      "new_rules": [
+        "2.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.7",
+      "old_title": "8.1.7 Недостающие сведения",
+      "old_basis_sha256": "d89ad70dc43c947e37b8b2cdfa3bd224870d947c14281135752e0287a558e4cd",
+      "new_rules": [
+        "2.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.8",
+      "old_title": "8.1.8 Обоснование перехода",
+      "old_basis_sha256": "d0910893614176f5d9bd58f39e045cfe268728f778cceff759869e4291a34e8b",
+      "new_rules": [
+        "3.3",
+        "6.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.9",
+      "old_title": "8.1.9 Смысл формулы",
+      "old_basis_sha256": "f5b203f2c09fb6b755c3d695e59c5d16a3da0f45e16463b007ecae0bf1b6bf70",
+      "new_rules": [
+        "6.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.10",
+      "old_title": "8.1.10 Обоснование выбора",
+      "old_basis_sha256": "66d02687e0756ced6e5abbc85381b75be7de710df1d994dfd3a8b3ee7c2a5c28",
+      "new_rules": [
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.11",
+      "old_title": "8.1.11 Основания оценки",
+      "old_basis_sha256": "a710cd20d78dc3efa12439f592bc2f57432eab6a43faa0bf56f168dd7cb87530",
+      "new_rules": [
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.12",
+      "old_title": "8.1.12 Статус и основание утверждения",
+      "old_basis_sha256": "579738c9beeb065be9584dd6cae727d29737226295604354caed4340bc87ec42",
+      "new_rules": [
+        "6.4"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.13",
+      "old_title": "8.1.13 Границы применения",
+      "old_basis_sha256": "10d1df3324a4f20733271e42e0f6d7c85f83868d97221beebd949721cb3f801a",
+      "new_rules": [
+        "2.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.14",
+      "old_title": "8.1.14 Посильный объём этапа",
+      "old_basis_sha256": "4b0578c38affc150ff7f39c059224d8c4df0df1587075311ab74d8f0232c42fb",
+      "new_rules": [
+        "4.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.1.15",
+      "old_title": "8.1.15 Абзацы и структура документа",
+      "old_basis_sha256": "af434296dd822bbd848e1235bcb478b382780e311f7aa8e91109e6312188ad36",
+      "new_rules": [
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.2",
+      "old_title": "8.2 Как строится ответ",
+      "old_basis_sha256": "b29642680b3d30eb75305b6d7c6e6e15b7beab78b4fed4c8139fd4ac33cf55e1",
+      "new_rules": [
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.3",
+      "old_title": "8.3 Как учитывается понимание читателя",
+      "old_basis_sha256": "2cb6ed33f980d960a9b14b0e582527e02e895baa5c41807c786947f948688648",
+      "new_rules": [
+        "1.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.4",
+      "old_title": "8.4 Как сокращается текст",
+      "old_basis_sha256": "7981bde3f1d85a5e31b145b87790f50f5aa1247b51353e1ce6fc8c42c1fe0b73",
+      "new_rules": [
+        "5.2",
+        "6.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.5",
+      "old_title": "8.5 Как проверяется изложение",
+      "old_basis_sha256": "4c0b8daedc0c5e146ed59e8bfb8014cbb5016e476ef77d80cb6a035ba3f8767f",
+      "new_rules": [
+        "6.3",
+        "9.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "8.6",
+      "old_title": "8.6 Краткие служебные сообщения",
+      "old_basis_sha256": "10687b70f44e96e261584bc8a415eaf2edeff901871d18bfa43707a734e2ccab",
+      "new_rules": [
+        "6.4",
+        "9.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "9",
+      "old_title": "9. Организация сложной задачи",
+      "old_basis_sha256": "c0f6a604fd42cb7f531adca582c766e84c921bfd950af10d7291c977b8443bd5",
+      "new_rules": [
+        "4.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "9.1",
+      "old_title": "9.1 Как выделяется этап работы",
+      "old_basis_sha256": "c4996f9d7def907deb8c49d0898a95d0f90f285b34f760bcfd2c900b78ee1c08",
+      "new_rules": [
+        "4.3",
+        "7.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "9.2",
+      "old_title": "9.2 Как устанавливается порядок",
+      "old_basis_sha256": "096ca477029e01fff7178fe6c0bdaf7a8232b3e6432e7e9e011a5185654ff54a",
+      "new_rules": [
+        "4.3",
+        "9.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "9.3",
+      "old_title": "9.3 Как выбирается и изменяется схема",
+      "old_basis_sha256": "9d86642ee0050f96ee4db50add7ade26f87502a3c39ee6ccdb29a16de4676843",
+      "new_rules": [
+        "4.3",
+        "8.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "9.4",
+      "old_title": "9.4 Как происходит возврат к основанию",
+      "old_basis_sha256": "888935ed0fec8b36071b8dfcc4fc7c70db39529cb977cab34e14edb2f7643945",
+      "new_rules": [
+        "8.1",
+        "8.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "10",
+      "old_title": "10. Приоритет практики",
+      "old_basis_sha256": "044ec2755948559a76d39c97f4538b0c306594564496694e67de661f7b85c818",
+      "new_rules": [
+        "4.1",
+        "7.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "10.1",
+      "old_title": "10.1 Как выбирается основание проверки",
+      "old_basis_sha256": "61a40c5a46e803badeb26033dfc40c13196c4b5ea694489b33df5f6c6cac2f2c",
+      "new_rules": [
+        "4.1",
+        "4.2",
+        "7.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "10.2",
+      "old_title": "10.2 Как результат проверки меняет работу",
+      "old_basis_sha256": "b1beddd5cb6ec81a4d851092baa34e2add8bfcdd99fa9b2b064e11b6e688ab4a",
+      "new_rules": [
+        "7.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "10.3",
+      "old_title": "10.3 Как проверяются тексты и объяснения",
+      "old_basis_sha256": "4a4e5b2507058fc55b8836724d8383b1b83ea12c5557b72d51f9514e21697316",
+      "new_rules": [
+        "7.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "10.4",
+      "old_title": "10.4 Как используются внешние сведения",
+      "old_basis_sha256": "d2b9f7d4f5270a85f91355c4a740b03d2969f7db73f3d7cf31b641a7907677d4",
+      "new_rules": [
+        "2.2",
+        "7.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "11",
+      "old_title": "11. Учёт и восстановление хода работы",
+      "old_basis_sha256": "6d38e20e461a46de2cad65931a0017ea0d051b264da495da315b60cf8dc76387",
+      "new_rules": [
+        "9.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "11.1",
+      "old_title": "11.1 Как учитывается расход токенов",
+      "old_basis_sha256": "5c83c9e9d4b60e4acd6e68d86565c5d87cca56e8b1dcbb92a460b32b0d8ae622",
+      "new_rules": [
+        "4.3",
+        "5.2",
+        "9.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "11.2",
+      "old_title": "11.2 Как сохраняется ход выполнения",
+      "old_basis_sha256": "a19ec8927af720af1f183d4f1fb32de70a43425affca5ca3b6ecafe4939ced06",
+      "new_rules": [
+        "5.3",
+        "10.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "11.3",
+      "old_title": "11.3 Как наблюдения изменяют способ работы",
+      "old_basis_sha256": "accf9ae14a06143c3be21d2b141dd70d5849eb2846ca702192ad0a3585753367",
+      "new_rules": [
+        "10.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "11.4",
+      "old_title": "11.4 Как устанавливается срок хранения",
+      "old_basis_sha256": "1aef575a555fbf70d13bd634d1c084dfb22c1cdb6286b165c175cb84484dacc4",
+      "new_rules": [
+        "10.3"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "12",
+      "old_title": "12. Разбор ошибок",
+      "old_basis_sha256": "7044e4c3b65e58e76ea1d1f24fb0f3a4d2ef067554d47672a497a36eda62e445",
+      "new_rules": [
+        "8.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "12.1",
+      "old_title": "12.1 Как устанавливается ошибка",
+      "old_basis_sha256": "b9c0fe870bce7396803cb3e1fa762c67b2ed504699a2bdd3da689624653c83e7",
+      "new_rules": [
+        "4.2",
+        "8.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "12.2",
+      "old_title": "12.2 Как исследуется причина",
+      "old_basis_sha256": "ad3356e7e572fb6f3df51b2a6d79a74377806e45a282377483ea9d749c878fc1",
+      "new_rules": [
+        "8.1"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "12.3",
+      "old_title": "12.3 Как исправление становится проверяемым",
+      "old_basis_sha256": "861106ad41d1f86ef28f9f344ed54950c1239f77c0ee5d21740beabd9fae0f07",
+      "new_rules": [
+        "4.2",
+        "8.2"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    },
+    {
+      "old_section": "12.4",
+      "old_title": "12.4 Как проверяется и сохраняется результат",
+      "old_basis_sha256": "dd037e3e98e0a349405de5cf5b0332af16eee220f184986d84753d8c278412de",
+      "new_rules": [
+        "8.3",
+        "10.4"
+      ],
+      "decision": "merged_into_execution",
+      "origin": "agent_semantic_review"
+    }
+  ],
+  "meaning_review": "docs/EXECUTION_PROTOCOL.md"
+}
