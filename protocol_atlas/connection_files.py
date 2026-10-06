@@ -16,6 +16,8 @@ def project_paths(root):
     """Only distributable sources; never keys, database, runs or backups."""
     root = Path(root)
     paths = set(_source_paths(root)) | set(document_paths(root)) | {'atlas/annotations.json', '.env.example'}
+    paths.update(name for name in ('README.ru.md', 'PROTOCOL.en.md', 'LICENSE', 'CONTRIBUTING.md')
+                 if (root / name).is_file())
     if (root / 'atlas/rule_runtime.json').is_file():
         paths.add('atlas/rule_runtime.json')
     for folder, pattern in (('protocol_atlas', '*.py'), ('protocol_atlas/web', '*'),
@@ -40,7 +42,7 @@ def instruction_download(text, filename):
     return (text.rstrip() + '\n').encode('utf-8'), filename, 'text/markdown'
 
 
-def connection_download(root, language='ru', path=None, bundle='basic'):
+def connection_download(root, language='en', path=None, bundle='basic'):
     if language not in ('ru', 'en'):
         raise ValueError('Выберите язык файлов: ru или en.')
     if bundle not in ('basic', 'memory', 'project'):
@@ -56,7 +58,7 @@ def connection_download(root, language='ru', path=None, bundle='basic'):
         raw = source_bytes(root, name)
         # Runnable projects preserve Russian originals and their linked English
         # catalogs; translating the originals would invalidate those catalogs.
-        if language == 'ru' or bundle == 'project' and path is None or not name.endswith('.md'):
+        if language == 'ru' or bundle == 'project' and path is None or not name.endswith('.md') or name not in document_paths(root):
             files[name] = raw
         else:
             document = translations.read(name)

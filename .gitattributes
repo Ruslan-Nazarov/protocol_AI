@@ -1,0 +1,3 @@
+# Protocol evidence binds exact file bytes, including line endings.
+# Preserve those bytes on every platform instead of automatic normalization.
+* -text

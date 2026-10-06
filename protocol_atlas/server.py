@@ -183,7 +183,7 @@ def handler_for(root: Path, laboratory=None, ai_editor=None):
                 elif path == "/api/connection-files":
                     query = parse_qs(urlsplit(self.path).query, keep_blank_values=True)
                     try:
-                        data, filename, media_type = connection_download(root, query.get('language', ['ru'])[0], query.get('path', [None])[0], query.get('bundle', ['basic'])[0])
+                        data, filename, media_type = connection_download(root, query.get('language', ['en'])[0], query.get('path', [None])[0], query.get('bundle', ['basic'])[0])
                     except SourceConflict as exc:
                         self.send_json(409, {'error': str(exc)})
                     except ValueError as exc:

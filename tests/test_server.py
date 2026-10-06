@@ -44,7 +44,8 @@ class ServerTests(unittest.TestCase):
     def test_static_and_catalog_are_utf8_and_versioned(self):
         status, headers, body = self.request("GET", "/")
         self.assertEqual(status, 200)
-        self.assertIn("Протокол · Подключение и развитие", body.decode("utf-8"))
+        self.assertIn("Protocol · Connection and development", body.decode("utf-8"))
+        self.assertIn('<html lang="en">', body.decode("utf-8"))
         self.assertIn('/portal.js', body.decode('utf-8'))
         script_status, _, script = self.request('GET', '/portal.js')
         self.assertEqual(script_status, 200)
@@ -90,7 +91,7 @@ class ServerTests(unittest.TestCase):
                 self.assertIn('async function renderAdaptive()', source.decode('utf-8'))
 
     def test_connection_downloads_preserve_current_files_and_folders(self):
-        status, headers, body = self.request('GET', '/api/connection-files')
+        status, headers, body = self.request('GET', '/api/connection-files?language=ru')
         self.assertEqual(status, 200)
         self.assertEqual(headers['Content-Type'], 'application/zip')
         self.assertIn('attachment;', headers['Content-Disposition'])
@@ -98,13 +99,13 @@ class ServerTests(unittest.TestCase):
             self.assertEqual(archive.namelist(), list(CONNECTION_FILES))
             for path in CONNECTION_FILES:
                 self.assertEqual(archive.read(path), (ROOT / path).read_bytes())
-                status, headers, content = self.request('GET', '/api/connection-files?path=' + path)
+                status, headers, content = self.request('GET', '/api/connection-files?language=ru&path=' + path)
                 self.assertEqual(status, 200)
                 self.assertEqual(content, archive.read(path))
                 self.assertIn(path.rsplit('/', 1)[-1], headers['Content-Disposition'])
 
     def test_connection_downloads_use_current_english_translations(self):
-        status, _, body = self.request('GET', '/api/connection-files?language=en')
+        status, _, body = self.request('GET', '/api/connection-files')
         self.assertEqual(status, 200)
         store = TranslationStore(ROOT)
         with ZipFile(BytesIO(body)) as archive:
@@ -119,7 +120,7 @@ class ServerTests(unittest.TestCase):
 
     def test_downloads_include_other_documents_code_and_complete_app(self):
         for path in ('memory/GLOSSARY.md', 'docs/CONNECTING_AI.md', 'check_answer.py', 'protocol_atlas/memory.py'):
-            status, _, body = self.request('GET', '/api/connection-files?path=' + path)
+            status, _, body = self.request('GET', '/api/connection-files?language=ru&path=' + path)
             self.assertEqual(status, 200)
             self.assertEqual(body, (ROOT / path).read_bytes())
         status, _, body = self.request('GET', '/api/connection-files?bundle=project')

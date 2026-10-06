@@ -2,7 +2,7 @@
 // Source strings stay in Russian. Only the presentation layer uses this catalog.
 // English document units are accepted only against their saved Russian fingerprint.
 const AtlasI18n = (() => {
-  let language;try{language=localStorage.getItem('atlas-language')||'ru';}catch{language='ru';}
+  let language;try{language=localStorage.getItem('atlas-language')==='ru'?'ru':'en';}catch{language='en';}
   let bundle={ui:{entries:[]},documents:[]}, replacements=[], sourceMap=new Map(), unitMap=new Map();
   const nodes=new WeakMap(), attributes=new WeakMap();
   const normalize=value=>value.replace(/\r\n/g,'\n');

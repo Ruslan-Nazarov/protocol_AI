@@ -1,134 +1,82 @@
-# AI Work Protocol / Протокол работы с ИИ
+# AI Work Protocol
+
+**English** · [Русский](README.ru.md)
 
 A protocol and local toolkit for human–AI collaboration, with explicit reasoning, versioned memory, evidence checks, and task orchestration.
 
-The project combines a Russian-language execution protocol, a local web interface, a project runtime for AI clients, and bounded formal logic checks. It records task stages, artifact versions, verification evidence, and human feedback. Protocol requirements and implemented guarantees are documented separately; this is an experimental project.
+**AI makes mistakes. We seek out correct answers.** The protocol requires explicit logical justification and checks against practice. It connects each rule to its implementation, observable evidence, and the next permitted task transition.
 
-Licensed under the [MIT License](LICENSE).
+The current edition is **v0.5**: ten execution stages and 32 rules. Each rule specifies an action, a check, and pass, fail, or unavailable outcomes. This is an experimental project: documented requirements and implemented guarantees are kept distinct.
 
-**Quick start:** Python 3.10+; no external Python dependencies required.
+## Start here
+
+- [Read the complete protocol in English](PROTOCOL.en.md).
+- [Getting started: application and AI-client setup](docs/GETTING_STARTED.md).
+- [Contributing and offline checks](CONTRIBUTING.md).
+- [Russian protocol source](PROTOCOL.md) and [Russian README](README.ru.md).
+
+## Run locally
+
+Python **3.10 or newer** is required. The Python application uses the standard library; no pip installation is needed.
 
 ```sh
+git clone https://github.com/Ruslan-Nazarov/protocol_AI.git
+cd protocol_AI
 python -m protocol_atlas.server
 ```
 
-Open <http://127.0.0.1:8765>. On Windows, use `py -3` instead of `python` if needed. API keys are optional and only needed for additional model features; see [.env.example](.env.example).
+Open <http://127.0.0.1:8765>. The interface starts in English; use the language selector for Russian. An explicitly saved language preference is preserved. Stop the server with Ctrl+C. Use `--port 8766` to change the port.
 
-See [contributing and offline checks](CONTRIBUTING.md), [runtime documentation](docs/PROJECT_RUNTIME.md), and the [GitHub publication checklist](docs/GITHUB_PREPARATION.md). Most documentation is in Russian; English UI resources are available in `locales/en/`.
+On Windows, use `py -3` instead of `python` if needed. On Linux or macOS, your executable may be named `python3`.
 
----
+API credentials are optional. Reading the protocol, connecting an external AI client, and offline checks do not require model calls. Additional AI features use server-side credentials; [.env.example](.env.example) lists the supported settings. Never commit actual keys.
 
-Текущая редакция — **v0.5, протокол исполнения**: 10 этапов, 32 правила с действиями, проверками и исходами. [Основной текст](PROTOCOL.md), [перенос и границы](docs/EXECUTION_PROTOCOL.md). Проверка без API: `python -X utf8 scripts/verify_execution_protocol.py`.
+## What the toolkit does
 
-**ИИ ошибается. Мы ловим правильные ответы.** Протокол требует явного логического обоснования и столкновения каждого ответа с практикой. Накопленные правила сохранены; [карта переноса](docs/CORRECTNESS_REVISION.md) отделяет новые требования от действующих механизмов. В запросах используется компактная сборка правил с ограничением размера — [экономия токенов](docs/TOKEN_ECONOMY.md).
+The local application provides four main areas: Protocol, Connection, Results and memory, and Improvement. It supports reading and editing rules, inspecting implementation boundaries, connecting an AI client, and reviewing results and project memory.
 
-Четыре опоры — логика, картина мира, развитие и проверка реальностью. Развитие относится к самому предмету. [Исполнимый пример](docs/FOUR_PILLARS.md) связывает прогноз изменения файла с выводом и фактическим чтением; команда: `python -X utf8 scripts/run_four_pillars.py --save`.
+The installed project runtime records tasks, stages, artifact hashes, verification evidence, and human feedback. Checks are bound to the files they examined. Changed inputs require dependent results to be checked again. A technically verified result and human acceptance are separate states.
 
-Выбор логики оформляется версионным договором: причины выбора, правила, понятия, обозначения и посылки. Исполнимый адаптер проверяет выводы в двух ограниченных профилях — универсальной силлогистике и классической логике высказываний. Ловушки обнаруживают заранее предусмотренные отклонения до допуска результата в подключённом режиме.
+AI agents work in their own project chat. The agent supplies the plan and criteria; human corrections and acceptance come from actual human messages. Local CLI, MCP, and HTTP interfaces share the same project state. Generated state views should not be edited by hand.
 
-Описание: [логика и адаптер](docs/LOGIC_ADAPTER.md), [сверка всех правил](docs/LOGIC_RULE_AUDIT.md), [короткие тесты без API](docs/LOGIC_TESTS.md), [черновик для Армана Болата (Factory)](docs/PROTOCOL_BRIEF.md).
+The four pillars are logic, a world picture, development, and checking against reality. Development concerns the subject itself, not merely successive drafts. The toolkit includes a bounded example that combines a prediction about a file change, formal inference, and an actual read after the change.
 
-```powershell
+## Verification and limits
+
+Two supported formal profiles check derivability: universal syllogistic reasoning and classical propositional logic. A versioned contract records the selected profile, premises, rules, symbols, scope, and reasons for selection.
+
+Derivability does not establish the truth of sources, faithful interpretation of natural language, or correct execution by an arbitrary external agent. Structural checks, formal checks, empirical observations, and human judgment have different scopes. The project does not automatically control all actions of an external AI client.
+
+The optional laboratory compares bounded memory and continuation scenarios. Its measurements apply to their recorded conditions; preparing memory and invoking models have costs. Offline tests do not invoke paid models.
+
+## Offline checks
+
+```sh
+python -X utf8 -m unittest discover -s tests
 python -X utf8 scripts/verify_logic_core.py --quick
-python -X utf8 scripts/run_logic_demo.py --output build/logic_demo.json
 ```
 
-Проверяется выводимость из закреплённых посылок. Истинность источников, точность формализации свободного текста и произвольные действия внешнего агента не объявляются проверенными. Программный режим описан в контракте; отдельный интерфейс выбора логики в браузере пока не добавлен.
+GitHub Actions runs these checks on Windows and Linux with Python 3.10 and 3.12. Browser checks are separate; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Протокол — открытая логика работы ИИ: какие основания нужны для действия, как выбирается следующий шаг, чем подтверждается результат и когда требуется пересмотр. Его замысел — сделать эту логику явной, реализовать проверяемые отношения в жёсткой архитектуре и везде, где возможно, исполнять действия и проверять их скриптами, кодом и данными.
+The execution-protocol audit also checks a locally installed runtime. Its setup and command are documented in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Связь, которую должен сохранять проект: **правило → механизм → наблюдаемое свидетельство → допустимый переход**. Например, изменение исходных данных должно лишать зависимый результат прежней отметки проверки; движок обнаруживает изменение по контрольной сумме, помечает зависимые этапы и требует новой проверки. У каждого механизма должна быть указана граница того, что он подтверждает.
+## Repository layout
 
-Для первого знакомства — [краткий черновик для обсуждения](docs/PROTOCOL_BRIEF.md). [PROTOCOL.md](PROTOCOL.md) задаёт требования к работе; [карта реализации](docs/PROCESS_AUDIT.md) связывает их с кодом, проверками и оставшимися границами. Наличие требования в протоколе ещё не означает, что оно полностью реализовано. Сейчас архитектура закрепляет часть переходов и проверок; выбор достаточных критериев, содержательная оценка и применение правил внешним агентом остаются отдельной работой.
+| Path | Purpose |
+| --- | --- |
+| `PROTOCOL.en.md` | Complete English protocol for readers |
+| `PROTOCOL.md` | Russian source used by the runtime and linked translation checks |
+| `protocol_atlas/` | Catalog, local server, interface, runtime, and laboratory |
+| `atlas/` | Rule mappings and implementation annotations |
+| `locales/en/` | English interface and source-linked document translations |
+| `memory/` | Project history, decisions, errors, and reader profile |
+| `docs/` | Guides, implementation boundaries, and experiment reports |
+| `scripts/`, `tests/` | Offline verification and examples |
 
-Интерфейс помогает читать, редактировать, подключать и улучшать протокол. Главная страница открывает текст и этапы; основная навигация состоит из четырёх разделов: «Протокол», «Подключение», «Результаты и память», «Улучшение». [Назначение страниц и границы](docs/PORTAL.md).
+English is the primary entry point and the default interface language. Russian source documents and research notes remain available. Linked translations are checked against their source fingerprints; untranslated or changed units are shown explicitly rather than silently treated as current.
 
-Для подключения внешнего клиента локальный API ИИ не требуется. Профиль и условия можно уточнять в рабочем чате. API в настройках сайта нужен только для дополнительных функций с ИИ; стенды перенесены в инструменты разработки. Память показана с указанием проекта. Для принесённого ответа доступны локальная проверка текста и подготовка запроса на содержательный разбор во внешнем агенте.
+Local `.protocol/`, `data/`, `runs/`, `build/`, `.env`, and machine-specific `.codex/` files are excluded from Git. Back up project databases and runs separately with the server stopped; a Git commit does not preserve them.
 
-Следующий шаг — подключить протокол к Codex, Claude Code, Gemini CLI, другому агенту, API/MCP или чату с файлами. Архив содержит движок, правила, текущие условия и профиль пользователя. Основная работа остаётся в выбранном рабочем клиенте; план, тип, объём, сложность и критерии записывает агент. Ключ ИИ, беседа оценки и личная память автора не включаются в подключение клиента. [Сверка полного процесса](docs/PROCESS_AUDIT.md) и [механизм профиля](docs/READER_CONFIGURATION.md) описывают реализации и границы проверки.
+## License
 
-Общее ядро хранит задачи, версии артефактов, свидетельства проверок и человеческие замечания в `.protocol` рабочего проекта. Проверенный результат открывает следующий этап; изменённые основания требуют повторной проверки. Есть отдельный необязательный стенд и настройки хранения. Способы установки, рабочий цикл и фактические ограничения проверки клиентов описаны в [руководстве](docs/PROJECT_RUNTIME.md).
-
-Проект превращает правила долгой работы человека с ИИ в обозримую систему: правила, память, основания решений, проверки и история изменений. Лаборатория предназначена для проверки сжатия контекста и продолжения работы после смены сессии.
-
-Реализованы визуальный атлас, версионная память и лаборатория. В атласе: протокол с чтением по пунктам и описанием реализации рядом с правилом, поиск, ход работы, хранение, ошибки и решения. Записи памяти редактируются отдельными версиями, сохраняют основания и зависимости; изменение основания создаёт очередь пересмотра. Симулятор C/D исполняет четыре явно выбранные экспериментальные трактовки. Лаборатория проверяет черновики и сравнивает шесть способов передачи контекста на восьми сценариях. Действующий текст правил — [PROTOCOL.md](PROTOCOL.md); состояние работы — [memory/STATE.md](memory/STATE.md).
-
-Правила для запроса собираются через постоянное ядро и выбранные группы кратких инструкций. Обычные задачи могут подключать локальный поиск с точными основаниями памяти, проверку цитат и событий, граф переходов, рассмотрение критериев и ограниченные вычисления. Связанные этапы используют актуальные принятые результаты; изменение основания требует повторной проверки. Состав запроса, ограничения и механизмы описаны в [руководстве](docs/RUNTIME_RULES.md).
-
-## Архитектура
-
-- [Как подключить протокол к разным ИИ: общая папка, API и MCP](docs/CONNECTING_AI.md) — также раздел «Подключить ИИ» в приложении.
-- [Устройство приложения и памяти](docs/ARCHITECTURE.md)
-- [Первый опыт сжатия и восстановления](docs/EXPERIMENT_MEMORY.md)
-- [Задание на интерфейс](docs/UI_HANDOFF.md)
-- [Первый живой прогон и его ограничения](docs/FIRST_RUN.md)
-- [Работа с памятью и стендами](docs/WORKSPACE_GUIDE.md)
-- [Что реализовано и что требует исследования](docs/DELIVERY.md)
-- [Дополнительные сравнения и рекомендации](docs/COMPARISON_RESULTS.md)
-- [Точная память: реализация и длинные истории](docs/EXACT_MEMORY_RESULTS.md)
-
-## Открыть приложение
-
-Нужен Python 3.10 или новее; внешних зависимостей нет. Из папки проекта:
-
-```powershell
-py -3 -m protocol_atlas.server
-```
-
-Открыть http://127.0.0.1:8765. Для другого порта: `--port 8766`. Сервер работает только на локальном адресе; остановка — Ctrl+C. Источники читаются из файлов, обновление доступно кнопкой вверху. На узком экране навигация раскрывается через меню.
-
-## Подготовить каталог
-
-Нужен Python 3.10 или новее. Зависимости для каталога устанавливать не требуется. Команды выполняются из папки проекта:
-
-```powershell
-py -3 -m protocol_atlas.catalog
-py -3 -m unittest discover -s tests -v
-```
-
-На системах без Windows launcher использовать `python3` вместо `py -3`.
-
-Каталог записывается в `build/catalog.json`. Он включает `PROTOCOL.md`, все `memory/*.md`, `check_answer.py`, отдельный контракт стенда `docs/LAB_CONTRACT.md` и пояснения из `atlas/annotations.json`. Каждый исходник имеет SHA-256; программа проверяет непрерывное покрытие строк и побайтовое восстановление исходного файла из фрагментов. Заголовки внутри примеров кода не становятся разделами.
-
-Проверка полноты текста не доказывает полноту смыслового разбора правил или их выполнение ИИ. Различие явно сохранено в данных. При пропавшем обязательном файле или неоднозначной цитате сборка завершается ошибкой. Источники сборка не меняет.
-
-## Структура
-
-```text
-PROTOCOL.md             действующий протокол
-memory/                 состояние, решения, калибровка, ошибки и профиль читателя
-check_answer.py          существующая эвристическая проверка ответа
-protocol_atlas/          каталог, локальный сервер, интерфейс, подключения и стенд
-atlas/annotations.json  пояснения и открытые вопросы со ссылками на источники
-docs/                   архитектура и задания реализации
-tests/                  проверки каталога, сервера, хранения и механики опыта
-build/                  производные данные, исключены из Git
-runs/                   снимки, запросы, ответы, usage и оценки; исключены из Git
-data/memory.sqlite3     версии памяти, снимки оснований и очередь пересмотра; вне Git
-```
-
-## Стенд памяти и подключения
-
-В разделе «Стенды» видны исходный материал, сервис, модель, предел краткой памяти, число повторов и пауза между вызовами. Выбираются сценарий и условия: полный материал, обычное резюме, структура с основаниями, детерминированные записи, чтение источников по запросу, точные записи с проверкой ссылок. По умолчанию выбраны контроль и точные записи — до двух вызовов; остальные условия добавляются для сравнения. Все шесть условий требуют до девяти вызовов на повтор (два сжатия, шесть продолжений, план чтения). Максимум три повтора, 27 вызовов и 30 минут. Критерии оценщика не передаются моделям. Чтение ограничено тремя фрагментами снимка и бюджетом, без доступа к произвольным файлам. Сценарии: реальная история протокола, три положения ограничения среди отвлекающих записей, пересмотр основания, конфликт решения и гипотезы. Добавлены две длинные истории с архивными отвлекающими документами. Последние семь — явно синтетические случаи. Их ручная подготовка не считается бесплатным автоматическим созданием памяти.
-
-Поддерживаются текстовые Chat Completions Groq, Cerebras и OpenAI. Ключи и имена моделей читаются сервером в порядке: `.env` этого проекта, переменные процесса, `../dialecticalai/.env`, `../conspect/conspect/.env`. Читаются только переменные этих трёх сервисов; ключи не копируются, не передаются браузеру и не попадают в отчёты. Локальные переопределения можно задать по `.env.example`. Наличие ключа не гарантирует доступ к модели или подходящую квоту.
-
-Cerebras по умолчанию получает паузу 60 секунд между вызовами; это настройка стенда, а не обещание квоты сервиса. При HTTP 413 вход не урезается, при HTTP 429 автоматического повтора нет. Остановка прекращает новые вызовы; запрос в работе может завершиться в пределах своего таймаута. Пустой или оборванный ответ сохранён как техническая проблема.
-
-`runs/<id>/result.json` содержит точный снимок, параметры, версии программы, все запросы и ответы, сырое usage, автоматические проверки и оценки с цитатами. Файл обновляется атомарно; каждый новый прогон получает отдельный ID. Кнопка повтора использует прежний снимок даже после изменения исходников. После перезапуска сервера незавершённый прогон отмечается прерванным; автоматического продолжения нет. Полный отчёт можно скачать через интерфейс.
-
-Расход без usage неизвестен. При частичных данных показана известная часть; стоимость в валюте не рассчитывается. Проверки формата и путей не оценивают смысл ответа. Оценку смысла сохраняет человек с точной цитатой; история пересмотра остаётся в отчёте. Новые предложения по памяти и калибровке не подменяют принятые правила протокола.
-
-## Версионная память
-
-Исходные Markdown-документы можно редактировать в атласе: откройте документ и нажмите «Редактировать». Редактор показывает текст Markdown и предпросмотр оформления. «Сохранить» меняет исходный файл; прежний текст сохраняется в `data/source-history/<SHA>.md`. При конфликте версий файл не заменяется, черновик остаётся в редакторе. Переход между страницами сохраняет черновик до закрытия вкладки. Для переноса изменений в отдельные записи SQLite выполните импорт источников. Ссылки редакторских пояснений на изменившиеся цитаты помечаются как требующие обновления; строгая сборка каталога через CLI продолжает проверять однозначность цитат.
-
-В «Записи памяти» нажмите «Синхронизировать источники». Импорт сохраняет текст и SHA источника; смысловое одобрение не присваивается. Новая запись имеет тип, статус, содержание, потребность, переход, условия, проверку и основания. Пустое поле означает неизвестное. Ссылка на запись указывает точную версию. Правка создаёт новую версию; зависимые выводы получают требование пересмотра. Циклы оснований и перезапись чужой новой версии отклоняются.
-
-Для повторной проверки сначала обновляются устаревшие ссылки новой редакцией, затем сохраняется свидетельство. Для контекста выбираются записи и цель: основания включаются транзитивно. При недостатке записи, устаревшем основании или переполнении передача отмечается заблокированной; текст остаётся доступен целиком. Выбор записей сохраняется при смене поискового фильтра. Историю и контекст можно экспортировать в JSON. Сборка контекста сама не вызывает модель. Текст источника и дублирующее его утверждение передаются один раз, без потери. Контекст разделяет принятые записи, материалы источников, предложения/гипотезы и историю. Диагностика объясняет, помещаются ли выбранные записи и нужно ли сначала пересмотреть основания.
-
-Готовый контекст содержит реестр r/s-ID и SHA снимка. Ответ в типизированном JSON выбирает существующую запись/цитату или добавляет непроверенный вывод, предложение, неизвестное. Кнопка «Проверить ссылки и статусы» проверяет снимок, идентификаторы и точные цитаты; пути, версии и статусы раскрывает программа. Новый текст не получает статус принятого решения. Проверка не сохраняет ответ в память, не вызывает API и не доказывает следование вывода из оснований. Старый снимок опыта без точного контекста повторяется только с прежними условиями.
-
-Резервная копия: сохраните папки `data/` и `runs/` при остановленном сервере. Экспорт памяти JSON удобен для просмотра; полноценного восстановления базы из JSON пока нет. Оба каталога исключены из Git, поэтому один git-коммит их не сохраняет.
-
-Исходные Markdown-файлы и регулятор протокола остаются отдельными от экспериментальных записей и симулятора. Автоматического контроля произвольного внешнего агента нет. Запись «принято» не заменяет проверку основания; проверка формата не доказывает верный смысл.
+[MIT](LICENSE) · Copyright (c) 2026 Ruslan Nazarov.
